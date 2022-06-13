@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/realty-ai-gh/static/css/main.6986d315.css",
+    "main.js": "/realty-ai-gh/static/js/main.1f99240f.js",
+    "static/js/787.7ea89172.chunk.js": "/realty-ai-gh/static/js/787.7ea89172.chunk.js",
+    "static/media/videoPreview.png": "/realty-ai-gh/static/media/videoPreview.d36842adff1fb7f0378d.png",
+    "static/media/MapBox1.png": "/realty-ai-gh/static/media/MapBox1.cb493b04d7e767bed1ff.png",
+    "static/media/MapBackground.png": "/realty-ai-gh/static/media/MapBackground.4a269a842e40fa1f57e3.png",
+    "static/media/ProfileVector.png": "/realty-ai-gh/static/media/ProfileVector.987e15f34a61aad373d7.png",
+    "static/media/OTP-image.png": "/realty-ai-gh/static/media/OTP-image.78392a9fd0bc4e5e0514.png",
+    "static/media/Mobile-login.png": "/realty-ai-gh/static/media/Mobile-login.49dbe85bea8c3bf2dd19.png",
+    "static/media/ProfileImage.png": "/realty-ai-gh/static/media/ProfileImage.2dcf43ae18257db15f77.png",
+    "static/media/logo.svg": "/realty-ai-gh/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/realty-ai-gh/index.html",
+    "main.6986d315.css.map": "/realty-ai-gh/static/css/main.6986d315.css.map",
+    "main.1f99240f.js.map": "/realty-ai-gh/static/js/main.1f99240f.js.map",
+    "787.7ea89172.chunk.js.map": "/realty-ai-gh/static/js/787.7ea89172.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6986d315.css",
+    "static/js/main.1f99240f.js"
+  ]
+}
