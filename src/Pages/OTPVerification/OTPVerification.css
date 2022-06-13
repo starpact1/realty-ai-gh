@@ -1,0 +1,39 @@
+.otpField {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+    border: none;
+    border-bottom: 1px solid #B9B9B9;
+    padding: 0px;
+    background-color: inherit;
+    padding-bottom: 13px;
+    width: 20px;
+    
+}
+
+.otpField1:nth-child(-n+1)
+{
+    border-bottom: 1px solid #2743FD ;
+}
+
+.otpField2:nth-child(-n+2)
+{
+    border-bottom: 1px solid #2743FD ;
+}
+
+.otpField3:nth-child(-n+3)
+{
+    border-bottom: 1px solid #2743FD;
+}
+
+.otpField4:nth-child(-n+4)
+{
+    border-bottom: 1px solid #2743FD;
+}
+
+.otpField:focus {
+    border-bottom: 1px solid #2743FD;
+    outline: none;
+}

@@ -1,0 +1,15 @@
+.inputBase {
+    border: 1px solid #A9A9A9;
+    border-radius: 8px;
+    width: 100%;
+    padding: 12px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height */
+    margin-top: 5px;
+
+    color: #000000;
+}
