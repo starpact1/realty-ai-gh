@@ -17,6 +17,7 @@ import {
 import RangeSlider from './Component/RangeSlider';
 import ValueSlider from './Component/ValueSlider';
 import Profile from './Pages/Profile/Profile';
+import NotFound404 from './Pages/ErrorPages/NotFound404';
 
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
                 <Route path="/slider-range" element = { <ValueSlider/> } />
                 <Route path="/range-slider" element = { <RangeSlider/> } />
                 <Route path="/profile" element = { <Profile/> } />
+                <Route path="/*" element = {<NotFound404/>}/>
               </Routes>
             </Router>
           </>
