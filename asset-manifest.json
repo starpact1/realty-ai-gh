@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/realty-ai-gh/static/css/main.6986d315.css",
-    "main.js": "/realty-ai-gh/static/js/main.1f99240f.js",
+    "main.js": "/realty-ai-gh/static/js/main.cfa84564.js",
     "static/js/787.7ea89172.chunk.js": "/realty-ai-gh/static/js/787.7ea89172.chunk.js",
     "static/media/videoPreview.png": "/realty-ai-gh/static/media/videoPreview.d36842adff1fb7f0378d.png",
     "static/media/MapBox1.png": "/realty-ai-gh/static/media/MapBox1.cb493b04d7e767bed1ff.png",
@@ -13,11 +13,11 @@
     "static/media/logo.svg": "/realty-ai-gh/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/realty-ai-gh/index.html",
     "main.6986d315.css.map": "/realty-ai-gh/static/css/main.6986d315.css.map",
-    "main.1f99240f.js.map": "/realty-ai-gh/static/js/main.1f99240f.js.map",
+    "main.cfa84564.js.map": "/realty-ai-gh/static/js/main.cfa84564.js.map",
     "787.7ea89172.chunk.js.map": "/realty-ai-gh/static/js/787.7ea89172.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6986d315.css",
-    "static/js/main.1f99240f.js"
+    "static/js/main.cfa84564.js"
   ]
 }
