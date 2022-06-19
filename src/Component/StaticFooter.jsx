@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Button, Grid, Paper, styled, Typography } from '@mui/material'
+import { Box, Button, ButtonBase, Grid, Paper, styled, Typography } from '@mui/material'
 import Home from "../Images/Image1/Home.png"
 import Compare from "../Images/Image1/Compare.png"
 import ContactUs from "../Images/Image1/ContcatUs.png"
@@ -67,13 +67,16 @@ function StaticFooter() {
                        <FooterFont> Compare </FooterFont>
                     </Grid>
                     <Grid item xs={4} sx={{position: "relative"}}>
+                        <ButtonBase>
                         <ContactImageHolder>
                             <Box sx={{position: "absolute", width: "25px", height: "25px", backgroundImage: `url(${PhoneImage})`, top: "50%", left: "50%", transform: "translateY(-50%) translateX(-50%)"}}>
 
                             </Box>
                         </ContactImageHolder>
+                        
                         {/* <img src={ContactUs}/> */}
                       <FooterFont sx={{pt: "24px"}}> Contact Us </FooterFont>
+                      </ButtonBase>
                     </Grid>
                     <Grid item xs={2}>
                         <img src={whislist} style={{height: "19px"}}/>
@@ -82,6 +85,11 @@ function StaticFooter() {
                     <Grid item xs={2}>
                         <img src={ProfileImage} style={{height: "19px"}}/>
                        <FooterFont color="#4766F9"> Profile </FooterFont>
+                    </Grid>
+                </Grid>
+                <Grid container>
+                    <Grid item xs={12} sx={{ justifyContent: "center" }}>
+                        <Box sx={{ height: "5px", backgroundColor: "#E9ECEF", width: "145px", mt: "10px", mx: "auto" }}></Box>
                     </Grid>
                 </Grid>
             </Footer>

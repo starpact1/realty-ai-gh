@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { useEffect, useState } from 'react';
 import DesktopView from './Errors/DesktopView';
-import { Button, ThemeProvider } from '@mui/material';
+import { Button, CssBaseline, ThemeProvider } from '@mui/material';
 import theme from "./Theme/MainTheme"
 import Login from './Pages/Login/Login';
 import OTPVerification from './Pages/OTPVerification/OTPVerification';
@@ -18,6 +18,19 @@ import RangeSlider from './Component/RangeSlider';
 import ValueSlider from './Component/ValueSlider';
 import Profile from './Pages/Profile/Profile';
 import NotFound404 from './Pages/ErrorPages/NotFound404';
+import FilterScreen from './Pages/FilterScreen/FilterScreen';
+import PropertiesListing from './Pages/PropertiesListing/PropertiesListing';
+
+import SelectInput1 from './Component/PropertiesListingComponents/SelectInput1';
+import SelectInput2 from './Component/PropertiesListingComponents/SelectInput2';
+import WishList from './Pages/WishList/WishList';
+
+import SalesGraph from './Pages/SalesGraph/SalesGraph';
+import SalesInLast3Months from './Pages/SalesInLast3Months/SalesInLast3Months';
+import AgreementClause from './Pages/AgreementClause/AgreementClause';
+import Appreciation from './Component/FilterScreenComponent/Appreciation';
+import AppreciationPage from './Pages/AppreciationPage/AppreciationPage';
+
 
 
 function App() {
@@ -32,6 +45,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
+      <CssBaseline></CssBaseline>
       <div className="App">
 
         {showDesktopWarning ?
@@ -41,13 +55,25 @@ function App() {
           <>
             <Router>
               <Routes>
+                {/* Week 1 */}
                 <Route path="/" element = { <Login /> } />
                 <Route path="/otp-verification" element = { <OTPVerification/> } />
                 <Route path="/landing-page" element = { <LandingPage/> } />
-                <Route path="/slider-range" element = { <ValueSlider/> } />
-                <Route path="/range-slider" element = { <RangeSlider/> } />
                 <Route path="/profile" element = { <Profile/> } />
+                {/* Week 2 */}
+                <Route path="/filter-screen" element = { <FilterScreen/> } />
+                <Route path="/properties-listing" element = { <PropertiesListing/> } />
+                <Route path="/wishlist" element = { <WishList/> } />
+                <Route path="/sales-graph" element = { <SalesGraph/> } />
+                <Route path="/sales-in-last-3-months" element = { < SalesInLast3Months /> } />
+                <Route path="/agreement-clause" element = { < AgreementClause /> } />
+                <Route path="/appreciation-page" element={ <AppreciationPage/> }/>
                 <Route path="/*" element = {<NotFound404/>}/>
+
+                {/* Test Components */}
+
+                
+
               </Routes>
             </Router>
           </>

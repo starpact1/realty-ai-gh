@@ -11,12 +11,18 @@ import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import Search1 from '../../Component/LandingPageComponents/Search1';
 import FindLocality from '../../Component/LandingPageComponents/FindLocality';
 import WhyChooseRealtyAi from '../../Component/LandingPageComponents/WhyChooseRealtyAi';
+import HotSellingProjects from '../../Component/LandingPageComponents/HotSellingProjects';
+import ForLongTermInvestments from '../../Component/LandingPageComponents/ForLongTermInvestments';
+import HighRentalYields from '../../Component/LandingPageComponents/HighRentalYields';
+import HighSalesProperties from '../../Component/LandingPageComponents/HighSalesProperties';
+import HighAppreciation from '../../Component/LandingPageComponents/HighAppreciation';
+import StaticFooter from '../../Component/StaticFooter';
 
 function LandingPage() { 
 
   return (
     <div>
-      <Container variant="ct16" sx={{ textAlign: "left" }}>
+      <Container variant="ct16" sx={{ textAlign: "left", py: "22px" }}>
 
         <Grid container>
 
@@ -44,7 +50,13 @@ function LandingPage() {
       <Search1/>
       <FindLocality/>
       <WhyChooseRealtyAi/>
-
+      <HotSellingProjects/>
+      <ForLongTermInvestments/>
+      <HighRentalYields />
+      <HighSalesProperties />
+      <HighAppreciation />
+      <Box sx={{mb: 8}}></Box>
+      <StaticFooter />
     </div>
   )
 }

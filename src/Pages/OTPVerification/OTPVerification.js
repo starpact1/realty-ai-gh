@@ -62,7 +62,7 @@ function OTPVerification() {
 
                     <Grid item xs={12} sx={{ mt: "40px" }}>
                         <Typography variant="subHeading2">
-                            Didn’t you received the OTP? Resend OTP
+                            Didn’t you received the OTP? <Link to="/otp-verification" style={{ color: "#2743FD", textDecoration: "none" }}> Resend OTP </Link>
                         </Typography>
                     </Grid>
 

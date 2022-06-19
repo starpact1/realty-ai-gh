@@ -11,6 +11,7 @@ const MapBox = styled(Paper)(({ theme }) => ({
 
     background: "linear-gradient(98.81deg, #7BACFC 25.3%, #FFBF75 101.53%)",
     backgroundImage: `url(${MapBackground})`,
+    backgroundSize: "100%",
     mixBlendMode: "normal",
     borderRadius: "16px",
     display: "flex",
@@ -40,11 +41,11 @@ function FindLocality() {
             <Container variant="ct14" sx={{ mt: "25px" }}>
                 <MapBox sx = {{  }}>
                 <MapBox1 sx={{ backgroundImage: `url(${MapBoxImage1})` }}>
-                    {/* <img src={MapBoxImage1} style={{width: "100%"}} /> */}
+                   
                 </MapBox1>
                 <MapBox2>
                     <Box sx = {{ position: "absolute", width: "105px", height: "85.25px", textAlign: "left", top: "28px", left: "19px" }}>
-                    <Typography sx={{ fontFamily: 'DM Sans', fontStyle: "normal", fontWeight: "700", fontSize: "20px", lineHeight: "131.02%"/* or 26px */ , color: "#FFFFFF" }}>
+                    <Typography sx={{ fontFamily: 'DM Sans', fontStyle: "normal", fontWeight: "700", fontSize: "20px", lineHeight: "131.02%" , color: "#FFFFFF" }}>
                         Find the best locality
                     </Typography>
                     </Box>

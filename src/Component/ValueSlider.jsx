@@ -78,40 +78,23 @@ const IOSSlider = styled(Slider)(({ theme }) => ({
     },
   }));
 
-  const marks = [
-    {
-      value: 0,
-      scaledValue: 0,
-      label: "$0"
-    },
-    {
-      value: 50,
-      scaledValue: 4200,
-      label: "$0"
-    },
-    {
-      value: 6370,
-    },
-    {
-      value: 10620,
-    },
-  ];
+  
 
-function ValueSlider() {
+function ValueSlider({min, max, defaultValue, valueDisplay, marks, showCurrency = false}) {
   return (
     <div>
         <IOSSlider
         aria-label="ios slider"
-        defaultValue={[4500, 6500]}
+        defaultValue={defaultValue}
         marks={marks}
-        min={1000}
-        max={10000}
-        valueLabelDisplay="on"
+        min={min}
+        max={max}
+        valueLabelDisplay={valueDisplay}
         disableSwap
-        valueLabelFormat={(value)=> new Intl.NumberFormat('en-IN', {
+        valueLabelFormat={(value)=> { return (showCurrency ?   (new Intl.NumberFormat('en-IN', {
           style: 'currency',
           currency: 'INR',
-          maximumSignificantDigits: 3}).format(value) }
+          maximumSignificantDigits: 3}).format(value)): value )}}
       />
     </div>
   )

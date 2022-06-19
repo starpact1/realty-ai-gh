@@ -7,6 +7,14 @@ import Carret from "../../Images/Icon/carret.png"
 import ValueSlider from '../../Component/ValueSlider';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 
+const marks = [
+  {
+    value: 6000,
+    scaledValue: 6000,
+    label: "₹ 6000"
+  },
+ 
+];
 
 function Search1() {
   const cities = ["Mumbai", "Delhi", "Kolkata"]
@@ -52,9 +60,7 @@ function Search1() {
 
           <Grid item xs={12}>
             <Container variant="ct31" sx={{ textAlign: "left" }}>
-
-              <ValueSlider />
-
+              <ValueSlider min={1000} max={10000} defaultValue={[4000, 7600]} valueDisplay="on" marks={marks} showCurrency={true} />
             </Container>
           </Grid>
 

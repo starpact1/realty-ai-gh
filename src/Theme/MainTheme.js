@@ -26,6 +26,213 @@ const theme = createTheme({
       lineHeight: "183.2%"
     },
 
+    heading3: {
+      fontFamily: "DM Sans",
+      fontStyle: "normal",
+      fontWeight: "500",
+      fontSize: "22px",
+      lineHeight: "183.2%",
+      /* or 40px */
+
+      textAlign: "center",
+
+      color: "#4D515B",
+    },
+
+    salesPageHeading: {
+      fontFamily: "DM Sans",
+      fontStyle: "normal",
+      fontWeight: 700,
+      fontSize: "16px",
+      lineHeight: "100%",
+      /* identical to box height, or 16px */
+
+      letterSpacing: "0.02em",
+
+      /* Foundation /Blue/Dark */
+
+      color: "#1A1E25",
+    },
+
+    salesTableHeading: {
+      fontFamily: "DM Sans",
+      fontStyle: "normal",
+      fontWeight: 700,
+      fontSize: "13px",
+      lineHeight: "18px",
+      /* or 138% */
+
+
+      alignItems: "center",
+      textAlign: "center",
+      letterSpacing: -0.08,
+
+      color: "#707070",
+    },
+
+    salesTableBody: {
+      fontFamily: "DM Sans",
+      fontStyle: "normal",
+      fontWeight: 400,
+      fontSize: "12px",
+      lineHeight: "20px",
+      /* identical to box height, or 167% */
+
+      display: "flex",
+      alignItems: "center",
+      textAlign: "center",
+      letterSpacing: -0.24,
+      fontFeatureSettings: "tnum on, lnum on",
+
+      color: "#1B2641",
+    },
+
+    greenBadge: {
+      background: "rgba(166, 252, 169, 0.5)",
+      borderRadius: "2px",
+      fontWeight: "14px",
+      fontWeight: 500,
+      color: "#0D7611",
+      padding: "2px 4px 2px 4px"
+    },
+
+   
+
+    fs20fw700: {
+      fontFamily: "DM Sans",
+      fontStyle: "normal",
+      fontWeight: 700,
+      fontSize: "20px",
+      lineHeight: "116.7%",
+      color: "#000000"
+    },
+
+    fs23fw700: {
+      fontFamily: "DM Sans",
+      fontStyle: "normal",
+      fontWeight: 700,
+      fontSize: "18px",
+      lineHeight: "23px",
+
+      color: "#1A1E25",
+    },
+
+
+    fs14fw500: {
+      fontFamily: "DM Sans",
+      fontStyle: "normal",
+      fontWeight: 500,
+      fontSize: "14px",
+      lineHeight: "150.2%",
+      /* identical to box height, or 21px */
+
+
+      color: "#4D515B"
+    },
+
+    fs12fw700: {
+      fontFamily: "DM Sans",
+      fontStyle: "normal",
+      fontWeight: 700,
+      fontSize: "12px",
+      lineHeight: "16px",
+      /* identical to box height */
+
+
+      color: "#FFFFFF",
+    },
+
+    fs11fw500: {
+      fontFamily: "DM Sans",
+      fontStyle: "normal",
+      fontWeight: 500,
+      fontSize: 11,
+      lineHeight: "169.7%",
+      /* or 19px */
+
+
+      color: "#000000"
+    },
+
+    fs10fw500: {
+      fontFamily: "DM Sans",
+      fontStyle: "normal",
+      fontWeight: 500,
+      fontSize: "10px",
+      lineHeight: "150.2%",
+      /* identical to box height, or 15px */
+
+
+      color: "#FFFFFF"
+
+    },
+
+    fs10fw500lh130: {
+      fontFamily: "DM Sans",
+      fontStyle: "normal",
+      fontWeight: 500,
+      fontSize: "10px",
+      lineHeight: "130%",
+      /* identical to box height, or 13px */
+
+      letterSpacing: "0.01em",
+
+      color: "#686868"
+
+    },
+
+    fs15fw700: {
+      fontFamily: "DM Sans",
+      fontStyle: "normal",
+      fontWeight: 700,
+      fontSize: "15px",
+      lineHeight: "116.7%",
+      /* identical to box height, or 18px */
+
+
+      color: "#000000"
+
+    },
+
+    fs15fw700lh130: {
+      fontFamily: "DM Sans",
+      fontStyle: "normal",
+      fontWeight: 700,
+      fontSize: "15px",
+      lineHeight: "130%",
+      /* or 19px */
+
+      letterSpacing: "0.01em",
+
+      color: "#323643",
+
+    },
+
+    fs08fw400: {
+      fontFamily: "DM Sans",
+      fontStyle: "normal",
+      fontWeight: 400,
+      fontSize: "8px",
+      lineHeight: "150.2%",
+      /* identical to box height, or 12px */
+
+
+      color: "#4D515B"
+
+    },
+
+    seeAll: {
+      fontFamily: "DM Sans",
+      fontStyle: "normal",
+      fontWeight: 500,
+      fontSize: "14px",
+      lineHeight: "183.2%",
+      /* identical to box height, or 26px */
+
+
+      color: "#1D58AF"
+    },
+
     subHeading1: {
       fontWeight: 400,
       fontSize: "16px",
@@ -84,6 +291,7 @@ const theme = createTheme({
     MuiButton: {
 
       variants: [
+
         {
           props: { variant: "button1" },
           style: {
@@ -155,7 +363,40 @@ const theme = createTheme({
 
 
           }
-        }
+        },
+
+        {
+          props: { variant: "OnButton" },
+          style: {
+            background: "#EEFBFF",
+            boxShadow: "0px 0px 4px rgba(9, 87, 203, 0.51)",
+            borderRadius: "8px",
+            // width: "91px",
+            padding: "10px 7px",
+            height: "28px",
+            textTransform: "none",
+            fontFamily: "DM Sans",
+            fontStyle: "normal",
+            fontWeight: 500,
+            fontSize: "11px",
+            lineHeight: "116.7%",
+            whiteSpace: "nowrap",
+            /* identical to box height, or 13px */
+
+            textAlign: "center",
+
+            color: "#232326",
+
+          }
+        },
+      ]
+    },
+
+    MuiToggleButton: {
+
+      variants: [
+
+
       ]
     },
 
@@ -168,6 +409,7 @@ const theme = createTheme({
             paddingRight: "28px"
           }
         },
+
         {
           props: { variant: "ct29" },
           style: {
@@ -175,7 +417,15 @@ const theme = createTheme({
             paddingRight: "29px"
           }
         },
-        
+
+        {
+          props: { variant: "ct10" },
+          style: {
+            paddingLeft: "10px",
+            paddingRight: "10px"
+          }
+        },
+
         {
           props: { variant: "ct13" },
           style: {
@@ -183,6 +433,7 @@ const theme = createTheme({
             paddingRight: "13.4px"
           }
         },
+
         {
           props: { variant: "ct14" },
           style: {
@@ -190,6 +441,7 @@ const theme = createTheme({
             paddingRight: "14px"
           }
         },
+
         {
           props: { variant: "ct16" },
           style: {
@@ -197,6 +449,7 @@ const theme = createTheme({
             paddingRight: "16px"
           }
         },
+
         {
           props: { variant: "ct21" },
           style: {
@@ -204,6 +457,31 @@ const theme = createTheme({
             paddingRight: "21px"
           }
         },
+
+        {
+          props: { variant: "ct22" },
+          style: {
+            paddingLeft: "22px",
+            paddingRight: "22px"
+          }
+        },
+
+        {
+          props: { variant: "ct25" },
+          style: {
+            paddingLeft: "25px",
+            paddingRight: "25px"
+          }
+        },
+
+        {
+          props: { variant: "ct20" },
+          style: {
+            paddingLeft: "20px",
+            paddingRight: "20px"
+          }
+        },
+
         {
           props: { variant: "ct31" },
           style: {
@@ -228,6 +506,121 @@ const theme = createTheme({
       ]
     },
 
+    MuiPaper: {
+      variants: [
+
+        {
+          props: { variant: "square" },
+          style: {
+            background: "#FFFFFF",
+            boxShadow: "0px 2px 12px rgba(0, 0, 0, 0.25)",
+            borderRadius: "0px",
+          }
+        },
+
+        {
+          props: { variant: "Base" },
+          style: {
+            background: "#FFFFFF",
+            boxShadow: "0px 2px 12px rgba(0, 0, 0, 0.25)",
+            paddingTop: "25px",
+            paddingBottom: "20px",
+            marginTop: "25px"
+          }
+        },
+
+        {
+          props: { variant: "BGF9FBFF" },
+          style: {
+            background: "#F9FBFF",
+            boxShadow: "0px 2px 10px rgba(9, 87, 203, 0.25)",
+            paddingTop: "19px",
+            paddingBottom: "14px",
+            marginTop: "25px"
+          }
+        },
+
+        {
+          props: { variant: "E9F2FF" },
+          style: {
+            background: "#E9F2FF",
+            boxShadow: "0px 4px 4px rgba(74, 128, 240, 0.3)",
+            borderRadius: "10px",
+          }
+        },
+
+        {
+          props: { variant: "saleScore" },
+          style: {
+            background: "#C7D9FF",
+            boxShadow: "0px 0px 4px rgba(29, 88, 175, 0.57)",
+            borderRadius: "4px",
+            fontFamily: "DM Sans",
+            fontStyle: "normal",
+
+            fontWeight: 700,
+            fontSize: "36px",
+            // lineHeight: "47px",
+            height: "51px",
+            width: "max-content",
+            paddingLeft: "8px",
+            paddingRight: "8px",
+            /* identical to box height */
+
+            letterSpacing: "0.01em",
+            textDecorationLine: "underline",
+
+            color: "#00286B",
+
+          }
+        },
+
+        {
+          props: { variant: "score" },
+          style: {
+            paddingTop: "4.82px",
+            paddingLeft: "21px",
+            paddingBottom: "4.82px",
+            paddingRight: "21px",
+            background: "#4ABC4F",
+            borderRadius: "5px", fontFamily: "DM Sans",
+            textAlign: "center",
+            fontStyle: "normal",
+            fontWeight: 700,
+            fontSize: "16px",
+            lineHeight: "21px",
+
+            /* identical to box height */
+
+
+            color: "#FFFFFF"
+          }
+        },
+
+        {
+          props: { variant: "scoreBadge" },
+          style: {
+            paddingTop: "4.82px",
+            paddingLeft: "6px",
+            paddingBottom: "4.82px",
+            paddingRight: "6px",
+            background: "#4ABC4F",
+            borderRadius: "5px", fontFamily: "DM Sans",
+            textAlign: "center",
+            fontStyle: "normal",
+            fontWeight: 700,
+            fontSize: "16px",
+            lineHeight: "21px",
+
+            /* identical to box height */
+
+
+            color: "#FFFFFF"
+          }
+        },
+
+      ]
+    },
 
   }
 });
