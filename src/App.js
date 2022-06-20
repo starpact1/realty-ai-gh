@@ -14,22 +14,21 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import RangeSlider from './Component/RangeSlider';
+
 import ValueSlider from './Component/ValueSlider';
 import Profile from './Pages/Profile/Profile';
 import NotFound404 from './Pages/ErrorPages/NotFound404';
 import FilterScreen from './Pages/FilterScreen/FilterScreen';
 import PropertiesListing from './Pages/PropertiesListing/PropertiesListing';
-
-import SelectInput1 from './Component/PropertiesListingComponents/SelectInput1';
-import SelectInput2 from './Component/PropertiesListingComponents/SelectInput2';
 import WishList from './Pages/WishList/WishList';
 
 import SalesGraph from './Pages/SalesGraph/SalesGraph';
 import SalesInLast3Months from './Pages/SalesInLast3Months/SalesInLast3Months';
 import AgreementClause from './Pages/AgreementClause/AgreementClause';
-import Appreciation from './Component/FilterScreenComponent/Appreciation';
 import AppreciationPage from './Pages/AppreciationPage/AppreciationPage';
+import PastAppreciationPage from './Pages/PastAppreciationPage/PastAppreciationPage';
+
+import RentalYieldPage from './Pages/RentalYield/RentalYieldPage';
 
 
 
@@ -67,12 +66,15 @@ function App() {
                 <Route path="/sales-graph" element = { <SalesGraph/> } />
                 <Route path="/sales-in-last-3-months" element = { < SalesInLast3Months /> } />
                 <Route path="/agreement-clause" element = { < AgreementClause /> } />
-                <Route path="/appreciation-page" element={ <AppreciationPage/> }/>
+                <Route path="/appreciation-page" element= { <AppreciationPage/> } />
+                <Route path="/past-appreciation-page" element= { <PastAppreciationPage /> } />
+                <Route path="/rental-yield-page" element= { <RentalYieldPage /> } />
                 <Route path="/*" element = {<NotFound404/>}/>
 
                 {/* Test Components */}
 
-                
+                <Route path="slider-range" element = { <SliderRange /> } />
+                <Route path="value-slider" element = { <ValueSlider /> } />
 
               </Routes>
             </Router>

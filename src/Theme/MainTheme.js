@@ -70,6 +70,22 @@ const theme = createTheme({
       color: "#707070",
     },
 
+    salesTableHeading2: {
+      fontFamily: "DM Sans",
+      fontStyle: "normal",
+      fontWeight: 700,
+      fontSize: "11.5px",
+      lineHeight: "18px",
+      /* or 138% */
+
+
+      alignItems: "center",
+      textAlign: "center",
+      letterSpacing: -0.08,
+
+      color: "#707070",
+    },
+
     salesTableBody: {
       fontFamily: "DM Sans",
       fontStyle: "normal",
@@ -87,6 +103,20 @@ const theme = createTheme({
       color: "#1B2641",
     },
 
+    salesTableBody2: {
+      fontFamily: "DM Sans",
+      fontStyle: "normal",
+      fontWeight: 400,
+      fontSize: "11px",
+      lineHeight: "116.7%",
+      /* identical to box height, or 13px */
+
+
+      textAlign: "center",
+
+      color: "#1B2641",
+    },
+
     greenBadge: {
       background: "rgba(166, 252, 169, 0.5)",
       borderRadius: "2px",
@@ -96,7 +126,7 @@ const theme = createTheme({
       padding: "2px 4px 2px 4px"
     },
 
-   
+
 
     fs20fw700: {
       fontFamily: "DM Sans",
@@ -140,6 +170,19 @@ const theme = createTheme({
 
 
       color: "#FFFFFF",
+    },
+
+    fs12fw500: {
+      fontFamily: "DM Sans",
+      fontStyle: "normal",
+      fontWeight: 500,
+      fontSize: "12px",
+      lineHeight: "16px",
+      /* identical to box height */
+
+      letterSpacing: "0.01em",
+
+      color: "#00286B",
     },
 
     fs11fw500: {

@@ -69,26 +69,22 @@ function NotFound404() {
                     </Box>
 
                     <Box sx={{ mt: 2 }}>
-                        <Link to="/">
-                        /appreciation-page (Not available)
+                        <Link to="/appreciation-page">
+                        /appreciation-page 
                         </Link>
                     </Box>
 
                     <Box sx={{ mt: 2 }}>
-                        <Link to="/">
-                        /past-appreciation-page (Not available)
+                        <Link to="/past-appreciation-page">
+                        /past-appreciation-page 
                         </Link>
                     </Box>
 
-                    <Box sx={{ mt: 2 }}>
-                        <Link to="/">
-                        /appreciation-page (Not available)
-                        </Link>
-                    </Box>
+                    
 
                     <Box sx={{ mt: 2 }}>
-                        <Link to="/">
-                        /rental-yield (Not available)
+                        <Link to="/rental-yield-page">
+                        /rental-yield-page
                         </Link>
                     </Box>
                 </Paper>

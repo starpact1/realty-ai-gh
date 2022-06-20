@@ -6,64 +6,57 @@ import BasicTable2 from '../../Component/AppreciationPage/BasicTable2'
 import AppreciationChart from '../../Component/AppreciationPage/AppreciationChart'
 import StaticDisplaySlider from '../../Component/AppreciationPage/StaticDisplaySlider'
 
-const headings = ["Project", "Locality", `Appreciation \n (in next 5 years)`, "Appreciation \n (current rate)"]
+const headings = ["Project", "Locality", "Rental Yield"]
 
 const rows = [
     {
         first: "Om Towers",
         firstLink: "#",
         second: "Kandivali, Mumbai",
-        third: "30%",
-        thirdColor: "#FF3E3E",
-        thirdCarret: "down",
-        fourth: "30%",
-        fourthColor: "#FF3E3E",
-        fourthCarret: "down",
+        third: "2%",
+        thirdColor: "#E49500",
+
 
     },
     {
         first: "Raj Heights",
         firstLink: "#",
         second: "Malad, Mumbai",
-        third: "20%",
-        thirdColor: "#FF3E3E",
-        thirdCarret: "down",
-        fourth: "20%",
-        fourthColor: "#FF3E3E",
-        fourthCarret: "down",
+        third: "1%",
+        thirdColor: "#DB3B3B",
+
+
     },
     {
         first: "Kalindi Heights",
         firstLink: "#",
         second: "Vile Parle, Mumbai",
-        third: "80%",
+        third: "8%",
         thirdColor: "#4ABC4F",
-        thirdCarret: "up",
-        fourth: "80%",
-        fourthColor: "#4ABC4F",
-        fourthCarret: "up",
+
+
     },
     {
         first: "Nikunj Bhavan",
         firstLink: "#",
         second: "Andheri, Mumbai",
-        third: "10%",
-        thirdColor: "#FF3E3E",
-        thirdCarret: "down",
-        fourth: "10%",
-        fourthColor: "#FF3E3E",
-        fourthCarret: "down",
-    }
+        third: "5%",
+        thirdColor: "#0D7611",
+
+    },
+
 ]
 
-function AppreciationPage() {
+
+
+function RentalYieldPage() {
     return (
         <div>
-            <Paper variant="BGF9FBFF" sx={{ boxShadow: "none", mt: "-25px" }}>
+            <Paper variant="BGF9FBFF" sx={{ height: "100vh", boxShadow: "none", mt: "-25px" }}>
                 <Container variant="ct25" >
                     <Grid container sx={{}}>
                         <Grid item xs={8} sx={{ display: "flex", textAlign: "left", justifyContent: "start", alignItems: "center" }}>
-                            <Typography variant="salesPageHeading"> Appreciation </Typography>
+                            <Typography variant="salesPageHeading"> Past Appreciation </Typography>
                         </Grid>
                         <Grid item xs={4} sx={{ display: "flex", justifyContent: "end", alignItems: "end" }}>
                             <Paper variant="scoreBadge" sx={{ width: "61px", backgroundColor: "#FF3E3E" }}>
@@ -72,46 +65,19 @@ function AppreciationPage() {
                         </Grid>
                     </Grid>
 
-
-
-
-                    {/* <Box sx={{ textAlign: "left", mt: "10px" }}>
-                        <Typography variant="fs15fw700" lineHeight="32px" letterSpacing="0.01em">
-                            <span style={{ color: "#005DAF" }}> 1140 </span> units available.
-                        </Typography>
-                    </Box> */}
-
                     <Box sx={{ textAlign: "left", mt: "22px" }}>
                         <Typography variant="fs14fw500" lineHeight="18px" letterSpacing="0.01em" color="#323232" >
-                            This is approximate returns based on historic appreciation in the locality & predicted livability index in the future. This project has an average expected return on investment.
+                            The project or locality has appreciation 10% year on year for the past 5 years.
                         </Typography>
                     </Box>
 
                 </Container>
 
 
-
-                {/* <Box sx={{ mt: "20px" }}>
-                    <Container variant="ct22">
-                        <Chart2 />
-                    </Container>
-
-                </Box> */}
-
                 <Box sx={{ width: "100%", mt: "20px" }}>
                     <BasicTable2 headings={headings} rows={rows} padding="6px" />
                 </Box>
 
-                <Box sx={{ width: "100%", mt: "25px" }}>
-                    <Container variant="ct25">
-                        <AppreciationChart />
-                    </Container>
-
-                </Box>
-
-                <Box sx={{ mt: "20px" }}>
-                    <Typography variant="fs14fw500"> Appreciation </Typography>
-                </Box>
 
                 <Box sx={{ mt: "20px", textAlign: "left" }}>
                     <Container variant="ct25">
@@ -123,11 +89,11 @@ function AppreciationPage() {
                     <Container variant="ct25" sx={{ mt: "6px" }}>
                         <Grid container justifyContent="center" alignItems="center">
                             <Grid item xs={6} sx={{ pt: "14px" }}>
-                                <Typography variant="fs14fw500" fontWeight={400} > Appreciation </Typography>
+                                <Typography variant="fs14fw500" fontWeight={400} > Rental Yield </Typography>
                             </Grid>
 
                             <Grid item xs={6}>
-                                <StaticDisplaySlider min={0} max={100} defaultValue={50} valueDisplay="off" symbol="%" />
+                                <StaticDisplaySlider min={1} max={10} defaultValue={5} valueDisplay="off" symbol="%" />
                             </Grid>
 
                         </Grid>
@@ -175,9 +141,10 @@ function AppreciationPage() {
                     </Container>
 
                 </Box>
+
             </Paper>
         </div>
     )
 }
 
-export default AppreciationPage
+export default RentalYieldPage
