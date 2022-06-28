@@ -1,7 +1,20 @@
 import React from 'react'
+import { Button, Container, Grid, Paper, Typography, styled, ButtonBase } from '@mui/material'
 import BackIcon from "../../Images/Icon/back-icon.png"
-import { Button, Container, Grid, Paper, Typography } from '@mui/material'
+import FilterIcon1 from "../../Images/Icon/filter1.png"
 
+const MapButton = styled(ButtonBase)(({ theme }) => ({
+
+    height: "48px",
+    paddingTop: "14px",
+    paddingLeft: "14px",
+    paddingBottom: "16px",
+    paddingRight: "14px",
+    background: "#FFFFFF",
+    border: "0.8px solid #D6D6D6",
+    borderRadius: "12px",
+  
+  }))
 
 function Header() {
   return (
@@ -10,26 +23,22 @@ function Header() {
                 <Paper elevation={0} sx={{ backgroundColor : "inherit", p : 0 }}>
                     <Grid container sx = {{ display: "flex", justifyContent: "center", alignItems: "center", height: "70px" }}>
 
-                        <Grid item xs={4} sx={{ textAlign: "left" }}>
+                        <Grid item xs={4} sx={{ textAlign: "left",  }}>
                             <img src={BackIcon} />
                         </Grid>
 
                         <Grid item xs={4} sx={{ textAlign: "center" }}>
                             <Typography variant="heading3"  fontSize="22px">
-                                Filters
+                            Heatmap
                             </Typography>
                         </Grid>
 
                         <Grid item xs={4} sx={{ textAlign: "right" }}>
-                            <Button variant="text" sx={{
-                                color: "#1D58AF", textTransform: "none", fontFamily: "DM Sans",
-                                fontStyle: "normal",
-                                fontWeight: 400,
-                                fontSize: "17px",
-                                lineHeight: "183.2%",
-                            }}>
-                                Reset
-                            </Button>
+                        <MapButton sx={{ flexDirection: "column", height: "48px", pt: "9px", pb: "4px", px: "9px" }}>
+                <img src={FilterIcon1} />
+
+                <Typography variant="fs10fw500" lineHeight="183.2%" color="inherit"> Filters </Typography>
+              </MapButton>
                         </Grid>
                     </Grid>
                 </Paper>

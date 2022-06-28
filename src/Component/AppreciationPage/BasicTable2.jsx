@@ -6,10 +6,10 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import { styled, Typography } from '@mui/material';
+import { styled, Typography, Link } from '@mui/material';
 import RedDownCarret from "../../Images/Icon/RedDownCarret.png"
 import GreenUpCarret from "../../Images/Icon/GreenUpCarret.png"
-import { Link } from "react-router-dom"
+
 
 const THeadCell = styled(TableCell)(({ theme, padding }) => ({
     textAlign: "center",
@@ -59,8 +59,8 @@ function BasicTable2({ headings, rows, padding }) {
                                 <TCell component="th" scope="row" padding={padding}>
                                     {row.firstLink == "#" ?
                                         <>
-                                            <Link to="#">
-                                                <Typography variant="salesTableBody2"> {row.first} </Typography>
+                                            <Link to="#" >
+                                                <Typography variant="salesTableBody2" color="#1D58AF"> {row.first} </Typography>
                                             </Link>
                                         </>
                                         :

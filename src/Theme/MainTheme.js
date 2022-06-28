@@ -86,6 +86,20 @@ const theme = createTheme({
       color: "#707070",
     },
 
+    salesTableHeading3: {
+      fontFamily: "DM Sans",
+      fontStyle: "normal",
+      fontWeight: 700,
+      fontSize: "13px",
+      lineHeight: "18px",
+      /* or 138% */
+
+
+      letterSpacing: -0.08,
+
+      color: "#707070",
+    },
+
     salesTableBody: {
       fontFamily: "DM Sans",
       fontStyle: "normal",
@@ -117,15 +131,52 @@ const theme = createTheme({
       color: "#1B2641",
     },
 
+    salesTableBody3: {
+      fontFamily: "DM Sans",
+      fontStyle: "normal",
+      fontWeight: 400,
+      fontSize: "12px",
+      lineHeight: "20px",
+      /* identical to box height, or 167% */
+
+
+      textAlign: "center",
+      letterSpacing: -0.24,
+      fontFeatureSettings: "tnum on, lnum on",
+
+      color: "#1B2641",
+    },
+
+
+
     greenBadge: {
       background: "rgba(166, 252, 169, 0.5)",
       borderRadius: "2px",
       fontWeight: "14px",
-      fontWeight: 500,
+      fontWeight: 700,
       color: "#0D7611",
       padding: "2px 4px 2px 4px"
     },
 
+    redBadge: {
+      background: "rgb(251, 222, 225)",
+      borderRadius: "2px",
+      fontWeight: "14px",
+      fontWeight: 700,
+      color: "#DB3B3B",
+      padding: "2px 4px 2px 4px",
+
+    },
+
+    yellowBadge: {
+      background: "rgba(255, 246, 171, 0.529);",
+      borderRadius: "2px",
+      fontWeight: "14px",
+      fontWeight: 700,
+      color: "#E49500",
+      padding: "2px 4px 2px 4px",
+
+    },
 
 
     fs20fw700: {
@@ -160,6 +211,21 @@ const theme = createTheme({
       color: "#4D515B"
     },
 
+
+
+    fs13fw500: {
+      fontFamily: "DM Sans",
+      fontStyle: "normal",
+      fontWeight: 500,
+      fontSize: "13px",
+      lineHeight: "130%",
+      /* identical to box height, or 17px */
+
+      letterSpacing: "0.01em",
+
+      color: "#4D515B",
+    },
+
     fs12fw700: {
       fontFamily: "DM Sans",
       fontStyle: "normal",
@@ -170,6 +236,22 @@ const theme = createTheme({
 
 
       color: "#FFFFFF",
+    },
+
+    fs12fw400: {
+      fontFamily: "DM Sans",
+      fontStyle: "normal",
+      fontWeight: 400,
+      fontSize: "12px",
+      lineHeight: "22px",
+      /* or 183% */
+
+
+      /* amber black */
+
+      color: "#072D4B",
+
+      opacity: 0.6,
     },
 
     fs12fw500: {
@@ -210,6 +292,38 @@ const theme = createTheme({
 
     },
 
+    fs10fw400: {
+      fontFamily: "DM Sans",
+      fontStyle: "normal",
+      fontWeight: 400,
+      fontSize: 10,
+      lineHeight: "22px",
+      /* identical to box height, or 220% */
+
+
+      /* amber black */
+
+      color: "#072D4B",
+
+      opacity: 0.4,
+
+    },
+
+    fs8fw400: {
+      fontFamily: "DM Sans",
+      fontStyle: "normal",
+      fontWeight: 400,
+      fontSize: "8px",
+      lineHeight: "130%",
+      /* or 10px */
+
+      letterSpacing: "0.01em",
+
+      color: "#858585",
+
+    },
+
+
     fs10fw500lh130: {
       fontFamily: "DM Sans",
       fontStyle: "normal",
@@ -234,6 +348,20 @@ const theme = createTheme({
 
 
       color: "#000000"
+
+    },
+
+    fs16fw700: {
+      fontFamily: "DM Sans",
+      fontStyle: "normal",
+      fontWeight: 700,
+      fontSize: 16,
+      lineHeight: "100%",
+      /* identical to box height, or 16px */
+
+      letterSpacing: "0.02em",
+
+      color: "#1B2641",
 
     },
 
@@ -409,6 +537,30 @@ const theme = createTheme({
         },
 
         {
+          props: { variant: "button4" },
+          style: {
+            width: "118px",
+            height: "38px",
+            whiteSpace: "nowrap",
+            border: "1px solid #072D4B",
+            borderRadius: 4,
+
+            fontFamily: "DM Sans",
+            fontStyle: "normal",
+            fontWeight: 500,
+            fontSize: "15px",
+            lineHeight: "20px",
+
+            /* identical to box height */
+
+            textAlign: "center",
+
+            color: "#072D4B",
+
+          }
+        },
+
+        {
           props: { variant: "OnButton" },
           style: {
             background: "#EEFBFF",
@@ -435,10 +587,21 @@ const theme = createTheme({
       ]
     },
 
-    MuiToggleButton: {
+    MuiToggleButtonGroup: {
 
       variants: [
-
+        {
+          props: { variant: "BHKToggleButton" },
+          style: {
+            color: "red",
+            selected: {
+              "&&": {
+                backgroundColor: "red",
+                color: "green"
+              }
+            }
+          },
+        }
 
       ]
     },
@@ -580,6 +743,58 @@ const theme = createTheme({
             paddingTop: "19px",
             paddingBottom: "14px",
             marginTop: "25px"
+          }
+        },
+
+        {
+          props: { variant: "tableRedBadge" },
+          style: {
+            width: "32px",
+            height: "22px",
+            color: "#DB3B3B",
+            background: "rgba(255, 135, 135, 0.25)",
+            borderRadius: 4,
+
+            display: "flex",
+            fontStyle: "normal",
+            fontWeight: 500,
+            fontSize: "12px",
+            justifyContent: "center",
+            alignItems: "center"
+            // lineHeight: 18,
+          }
+        },
+
+        {
+          props: { variant: "tableGreenBadge" },
+          style: {
+            width: "32px",
+            height: "22px",
+            background: "rgba(166, 252, 169, 0.5)",
+            borderRadius: 4,
+            display: "flex",
+            fontStyle: "normal",
+            fontWeight: 500,
+            fontSize: "12px",
+            justifyContent: "center",
+            alignItems: "center"
+          }
+        },
+
+        {
+          props: { variant: "tableYellowBadge" },
+          style: {
+            width: "32px",
+            height: "22px",
+            background: "rgba(255, 246, 171, 0.529)",
+            borderRadius: 4,
+            display: "flex",
+            fontStyle: "normal",
+            fontWeight: 500,
+            fontSize: "12px",
+            justifyContent: "center",
+            alignItems: "center"
+
           }
         },
 

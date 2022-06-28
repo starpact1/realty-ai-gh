@@ -29,6 +29,18 @@ import AppreciationPage from './Pages/AppreciationPage/AppreciationPage';
 import PastAppreciationPage from './Pages/PastAppreciationPage/PastAppreciationPage';
 
 import RentalYieldPage from './Pages/RentalYield/RentalYieldPage';
+import EaseOfReselling from './Pages/EaseOfReselling/EaseOfReselling';
+import EaseOfRenting from './Pages/EaseOfRenting/EaseOfRenting';
+import LayoutsPage from './Pages/LayoutsPage/LayoutsPage';
+import ToggleButtons from './Test/ToggleButtons';
+import LocationPage from './Pages/LocationPage/LocationPage';
+import ConstructionStatusPage from './Pages/ConstructionStatusPage/ConstructionStatusPage';
+import LegalStatus from './Pages/LegalStatus/LegalStatus';
+import BuilderHistory from './Pages/BuilderHistory/BuilderHistory';
+import AmenitiesPage from './Pages/AmenitiesPage/AmenitiesPage';
+import PriceValue from './Pages/PriceValue/PriceValue';
+import ComparePage from './Pages/ComparePage/ComparePage';
+import HeatMap from './Pages/HeatMap/HeatMap';
 
 
 
@@ -71,10 +83,26 @@ function App() {
                 <Route path="/rental-yield-page" element= { <RentalYieldPage /> } />
                 <Route path="/*" element = {<NotFound404/>}/>
 
+                {/* Week 3 */}
+
+                <Route path="/ease-of-reselling" element = {<EaseOfReselling/>}/>
+                <Route path="/ease-of-renting" element = {<EaseOfRenting/>}/>
+                <Route path="/layouts-page" element = {<LayoutsPage/>}/>
+                <Route path="/location-page" element = {<LocationPage/>}/>
+                <Route path="/construction-status-page" element = { <ConstructionStatusPage /> }/>
+                <Route path="/legal-status" element = { <LegalStatus /> }/>
+                <Route path="/builder-history" element = { <BuilderHistory /> }/>
+                <Route path="/amenities-page" element = { <AmenitiesPage /> }/>
+                <Route path="/price-value" element = { <PriceValue /> }/>
+                <Route path="/compare-page" element = { <ComparePage /> }/>
+                <Route path="/heat-map" element = { <HeatMap /> }/>
+
                 {/* Test Components */}
 
                 <Route path="slider-range" element = { <SliderRange /> } />
                 <Route path="value-slider" element = { <ValueSlider /> } />
+                <Route path="toggle-button" element = { <ToggleButtons /> } />
+                
 
               </Routes>
             </Router>

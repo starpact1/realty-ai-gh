@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Button, ButtonBase, Container, Grid, Paper, styled, Typography } from '@mui/material'
+import { Box, Button, ButtonBase, Checkbox, Container, Grid, Paper, styled, Typography } from '@mui/material'
 import WhishListBlank from "../../Images/Icon/WhisListBlank.png"
 import WhishListFilled from "../../Images/Icon/whishList.png"
 import BestPropertyImage from "../../Images/Image1/BestPropertyImage.png"
@@ -73,7 +73,10 @@ const Ptext3 = {
     text3: "Society has appropriate layout with great aesthetics"
 }
 
-function BestProjects({ mt = 0, wishlist = false }) {
+function BestProjects({ mt = 0, wishlist = false, compare = false }) {
+
+    const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
+
     return (
         <div>
             <Paper variant="E9F2FF" sx={{ mt: `${mt}`, pb: "23px" }}>
@@ -81,7 +84,11 @@ function BestProjects({ mt = 0, wishlist = false }) {
                     <Grid container>
                         <Grid item xs={4}>
                             <Box sx={{ width: "100%", height: "100%", backgroundImage: `url(${BestPropertyImage})`, backgroundSize: "100% 100%", backgroundRepeat: "no-repeat" }}>
-
+                                {compare &&
+                                    <Box sx={{  width : "100%", height : "100%", display : "flex", alignItems: "center", justifyContent: "center", background : "rgba(127, 134, 164, 0.6)", borderRadius : "10px 0px 0px 0px" }}>
+                                        <Checkbox {...label} defaultChecked sx={{ '& .MuiSvgIcon-root': { fontSize: 62, color: "#00286B",  }  }}  />
+                                    </Box>
+                                }
                             </Box>
                         </Grid>
                         <Grid item xs={8}>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Box, Button, ButtonBase, Grid, Paper, styled, Typography } from '@mui/material'
 import Home from "../Images/Image1/Home.png"
 import Compare from "../Images/Image1/Compare.png"
@@ -6,6 +6,8 @@ import ContactUs from "../Images/Image1/ContcatUs.png"
 import whislist from "../Images/Image1/WhishList.png"
 import ProfileImage from "../Images/Image1/Profile.png"
 import PhoneImage from "../Images/Image1/phone2.png"
+import FooterModal from './FooterModal'
+import { useRef } from 'react'
 const Footer = styled(Paper)(({ theme }) => ({
 
     position: "fixed",
@@ -52,6 +54,16 @@ const ContactImageHolder = styled(Box)(({ theme }) => ({
 
 
 function StaticFooter() {
+
+    const [isOpen, setIsOpen] = useState(false)
+
+    const handelIsOpen = () => {
+        setIsOpen(true)
+        console.log(isOpen)
+    }
+
+    const modalRef = useRef();
+
     return (
         <div>
             <Footer>
@@ -67,7 +79,7 @@ function StaticFooter() {
                        <FooterFont> Compare </FooterFont>
                     </Grid>
                     <Grid item xs={4} sx={{position: "relative"}}>
-                        <ButtonBase>
+                        <ButtonBase onClick={() => modalRef.current.handleOpen1()} >
                         <ContactImageHolder>
                             <Box sx={{position: "absolute", width: "25px", height: "25px", backgroundImage: `url(${PhoneImage})`, top: "50%", left: "50%", transform: "translateY(-50%) translateX(-50%)"}}>
 
@@ -93,6 +105,7 @@ function StaticFooter() {
                     </Grid>
                 </Grid>
             </Footer>
+            <FooterModal ref={modalRef}/>
         </div>
     )
 }

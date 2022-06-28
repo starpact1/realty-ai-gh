@@ -87,6 +87,76 @@ function NotFound404() {
                         /rental-yield-page
                         </Link>
                     </Box>
+
+                    {/* 3rd week Design */}
+                    <Box sx={{ mt: 2 }}>
+                        <Link to="/ease-of-reselling">
+                        /ease-of-reselling
+                        </Link>
+                    </Box>
+
+                    <Box sx={{ mt: 2 }}>
+                        <Link to="/ease-of-renting">
+                        /ease-of-renting
+                        </Link>
+                    </Box>
+
+                    <Box sx={{ mt: 2 }}>
+                        <Link to="/layouts-page">
+                        /layouts-page
+                        </Link>
+                    </Box>
+
+                    <Box sx={{ mt: 2 }}>
+                        <Link to="/location-page">
+                        /location-page
+                        </Link>
+                    </Box>
+
+                    <Box sx={{ mt: 2 }}>
+                        <Link to="/construction-status-page">
+                        /construction-status-page
+                        </Link>
+                    </Box>
+
+                    <Box sx={{ mt: 2 }}>
+                        <Link to="/legal-status">
+                        /legal-status
+                        </Link>
+                    </Box>
+
+                    <Box sx={{ mt: 2 }}>
+                        <Link to="/builder-history">
+                        /builder-history
+                        </Link>
+                    </Box>
+
+                    <Box sx={{ mt: 2 }}>
+                        <Link to="/amenities-page">
+                        /amenities-page
+                        </Link>
+                    </Box>
+
+                    <Box sx={{ mt: 2 }}>
+                        <Link to="/price-value">
+                        /price-value
+                        </Link>
+                    </Box>
+
+                    <Box sx={{ mt: 2 }}>
+                        <Link to="/compare-page">
+                        /compare-page
+                        </Link>
+                    </Box>
+
+                    <Box sx={{ mt: 2 }}>
+                        <Link to="/heat-map">
+                        /heat-map
+                        </Link>
+                    </Box>
+
+
+
                 </Paper>
             </Container>
 

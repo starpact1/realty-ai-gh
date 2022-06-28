@@ -56,18 +56,18 @@ function RentalYieldPage() {
                 <Container variant="ct25" >
                     <Grid container sx={{}}>
                         <Grid item xs={8} sx={{ display: "flex", textAlign: "left", justifyContent: "start", alignItems: "center" }}>
-                            <Typography variant="salesPageHeading"> Past Appreciation </Typography>
+                            <Typography variant="salesPageHeading"> Rental Yield </Typography>
                         </Grid>
                         <Grid item xs={4} sx={{ display: "flex", justifyContent: "end", alignItems: "end" }}>
-                            <Paper variant="scoreBadge" sx={{ width: "61px", backgroundColor: "#FF3E3E" }}>
-                                18%
+                            <Paper variant="scoreBadge" sx={{ width: "61px", backgroundColor: "#FBC11B" }}>
+                                3%
                             </Paper>
                         </Grid>
                     </Grid>
 
                     <Box sx={{ textAlign: "left", mt: "22px" }}>
                         <Typography variant="fs14fw500" lineHeight="18px" letterSpacing="0.01em" color="#323232" >
-                            The project or locality has appreciation 10% year on year for the past 5 years.
+                        Rental yield for this project is  <Typography component="span" variant="greenBadge"> higher </Typography>  than the locality average. See rental yields of similar projects below.
                         </Typography>
                     </Box>
 
