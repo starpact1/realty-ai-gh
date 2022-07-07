@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/realty-ai-gh/static/css/main.4f6c231d.css",
-    "main.js": "/realty-ai-gh/static/js/main.704002b6.js",
+    "main.css": "/realty-ai-gh/static/css/main.3774235d.css",
+    "main.js": "/realty-ai-gh/static/js/main.c204c0a1.js",
     "static/js/787.7ea89172.chunk.js": "/realty-ai-gh/static/js/787.7ea89172.chunk.js",
     "static/media/HeatMap.png": "/realty-ai-gh/static/media/HeatMap.7e9b827fe3d131f1c5f7.png",
     "static/media/PriceValueImage.png": "/realty-ai-gh/static/media/PriceValueImage.4c2a779fba559018d90d.png",
+    "static/media/Sample1.png": "/realty-ai-gh/static/media/Sample1.6a4acd4e333f84dc4628.png",
     "static/media/videoPreview.png": "/realty-ai-gh/static/media/videoPreview.d36842adff1fb7f0378d.png",
     "static/media/SlideImage2.png": "/realty-ai-gh/static/media/SlideImage2.6bc4f0a5477e90c2bf9a.png",
     "static/media/SlideImage1.png": "/realty-ai-gh/static/media/SlideImage1.20b30ce8cb186a24515b.png",
@@ -36,12 +37,12 @@
     "static/media/slick.ttf": "/realty-ai-gh/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/realty-ai-gh/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/realty-ai-gh/index.html",
-    "main.4f6c231d.css.map": "/realty-ai-gh/static/css/main.4f6c231d.css.map",
-    "main.704002b6.js.map": "/realty-ai-gh/static/js/main.704002b6.js.map",
+    "main.3774235d.css.map": "/realty-ai-gh/static/css/main.3774235d.css.map",
+    "main.c204c0a1.js.map": "/realty-ai-gh/static/js/main.c204c0a1.js.map",
     "787.7ea89172.chunk.js.map": "/realty-ai-gh/static/js/787.7ea89172.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4f6c231d.css",
-    "static/js/main.704002b6.js"
+    "static/css/main.3774235d.css",
+    "static/js/main.c204c0a1.js"
   ]
 }
