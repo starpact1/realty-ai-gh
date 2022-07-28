@@ -1,11 +1,11 @@
-import React from 'react'
-import { Box, Button, ButtonBase, Container, Grid, Paper, Table, ToggleButton, ToggleButtonGroup, Typography } from '@mui/material'
+import React, { useState } from 'react'
+import { Box, Button, ButtonBase, Collapse, Container, Grid, Paper, Table, ToggleButton, ToggleButtonGroup, Typography } from '@mui/material'
 import BasicTable from '../../Component/SalesGraph/BasicTable'
 import Chart2 from '../../Component/SalesInLast3Months/Chart2'
 
 
-const headings = ["Similar Project", "Sales in last quarter", "Sales/Total"]
-const rows = [ 
+const headings = ["Similar Projects", "Sales in last quarter", "Sales/Total"]
+const rows = [
     {
         first: "Anindya",
         second: "13",
@@ -21,12 +21,15 @@ const rows = [
         second: "15",
         third: "154/280 (50%)"
     }
- ]
+]
 
 function SalesInLast3Months() {
+
+    const [seeMore, setSeeMore] = useState(false)
+
     return (
         <div>
-            <Paper variant="BGF9FBFF" sx={{ boxShadow: "none", mt: "-25px" }}>
+            <Paper variant="BGF9FBFF" sx={{ boxShadow: "none", mt: "-25px", minHeight: "100vh" }}>
                 <Container variant="ct25" >
                     <Grid container sx={{}}>
                         <Grid item xs={8} sx={{ display: "flex", textAlign: "left", justifyContent: "start", alignItems: "center" }}>
@@ -72,17 +75,21 @@ function SalesInLast3Months() {
                     <Box sx={{ textAlign: "left", mt: "10px" }}>
                         <Typography variant="fs14fw500" lineHeight="18px" letterSpacing="0.01em" color="#323232" >
                             The project has  <Typography component="span" variant="greenBadge"> sold more units </Typography>  than the  average for other projects in the locality.
-                        </Typography>                        
+                        </Typography>
                     </Box>
 
-                    <Box sx = {{ textAlign: "left", mt: "10px" }}>
-                    <Typography variant="fs14fw500" lineHeight="18px" letterSpacing="0.01em" color="#323232" >
-                        See sales of units over time
-                        </Typography>
+                    <Box sx={{ textAlign: "left", mt: "10px" }}>
+                        <ButtonBase onClick={ () => setSeeMore( prev => !prev) } sx={{ width: "100%", textAlign: "left", justifyContent: "start" }}>
+                            <Typography variant="seeAll" lineHeight="18px" letterSpacing="0.01em"  >
+                                {seeMore ? "See Less" : "See sales of units over time "}
+                                
+                            </Typography>
+                        </ButtonBase>
+
                     </Box>
                 </Container>
 
-                
+
 
                 <Box sx={{ mt: "20px" }}>
                     <Container variant="ct22">
@@ -92,7 +99,10 @@ function SalesInLast3Months() {
                 </Box>
 
                 <Box sx={{ width: "100%", mt: "20px" }}>
-                    <BasicTable headings={headings} rows={rows} />
+                    <Collapse in={seeMore}>
+                        <BasicTable headings={headings} rows={rows} />
+                    </Collapse>
+
                 </Box>
             </Paper>
         </div>

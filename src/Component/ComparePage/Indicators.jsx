@@ -63,8 +63,8 @@ function Indicators({ data }) {
     const [placeTop, setPlaceTop] = useState(0);
     const getTopPosition = () => {
 
-        setPlaceTop( parseInt(indicatorRef.current.offsetTop) + 30 )
-        
+        setPlaceTop(parseInt(indicatorRef.current.offsetTop) + 30)
+
         console.log(placeTop)
     }
 
@@ -73,30 +73,34 @@ function Indicators({ data }) {
         getTopPosition();
 
     }, [])
-    
+
 
 
     return (
         <div>
 
-            <Box sx={{ width: "100vw", position: "absolute", top: `${placeTop}`,  background: "#F4F6FC", height: "45px", display: "flex", justifyContent: "center", alignItems: "center" }}>
-                <Typography variant="fs14fw500"> {data.header} </Typography>
-                <Box sx={{ position: "absolute", right: "14px", pt: "4px" }}>
-                    <ButtonBase onClick={handelViewChange}>
+            <Box sx={{ width: "100vw", top: `${placeTop}`, background: "#F4F6FC", height: "45px", display: "flex", justifyContent: "center", alignItems: "center" }}>
+                <ButtonBase onClick={handelViewChange} sx={{width: "100%", height: "100%"}}>
+                    <Typography variant="fs14fw500"> {data.header} </Typography>
+                    <Box sx={{ position: "absolute", right: "10px", pt: "4px" }}>
+                        {/* <ButtonBase onClick={handelViewChange}> */}
                         {viewMore == true ?
                             <KeyboardArrowUpIcon fontSize="8px" />
                             :
                             <KeyboardArrowDownIcon fontSize="8px" />
                         }
 
-                    </ButtonBase>
+                        {/* </ButtonBase> */}
 
-                </Box>
+                    </Box>
+
+                </ButtonBase>
+
 
             </Box>
             <Collapse in={viewMore} ref={indicatorRef}>
-                <Box sx={{ display: "flex",  }}>
-                    <Box sx={{ mt: "46px", borderRight: "1px solid #D1CFD7" }}>
+                <Box sx={{ display: "flex", }}>
+                    <Box sx={{ mt: "2px", borderRight: "1px solid #D1CFD7" }}>
                         {data.content?.map((item, key) => (
                             <Box116 key={key}>
                                 {item.title}
@@ -106,7 +110,7 @@ function Indicators({ data }) {
 
                     </Box>
 
-                    <Box sx={{ mt: "46px", borderRight: "1px solid #D1CFD7" }}>
+                    <Box sx={{ mt: "2px", borderRight: "1px solid #D1CFD7" }}>
                         {data.content?.map((item, key) => (
                             <Box112 key={key} sx={{ background: `${item.firstColor}` }}>
                                 {item.first}
@@ -116,7 +120,7 @@ function Indicators({ data }) {
 
                     </Box>
 
-                    <Box sx={{ mt: "46px", borderRight: "1px solid #D1CFD7" }}>
+                    <Box sx={{ mt: "2px", borderRight: "1px solid #D1CFD7" }}>
 
                         {data.content?.map((item, key) => (
                             <Box112 key={key}>
@@ -127,7 +131,7 @@ function Indicators({ data }) {
 
                     </Box>
 
-                    <Box sx={{ mt: "46px", borderRight: "1px solid #D1CFD7" }}>
+                    <Box sx={{ mt: "2px", borderRight: "1px solid #D1CFD7" }}>
 
                         {data.content?.map((item, key) => (
                             <Box112 key={key}>

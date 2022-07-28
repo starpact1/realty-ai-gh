@@ -29,7 +29,7 @@ const TCell = styled(TableCell)(({theme, padding})=>({
 export default function BasicTable({headings, rows, padding}) {
   return (
     <TableContainer component={Paper}>
-      <Table sx={{ minWidth: "100%",  }} aria-label="simple table">
+      <Table sx={{ minWidth: "100%", borderCollapse: "collapse"  }} aria-label="simple table">
         <TableHead>
           <TableRow sx={{ background: "#F7F7FA" }}>
             {headings.map((heading, key) => (
@@ -41,14 +41,14 @@ export default function BasicTable({headings, rows, padding}) {
           </TableRow>
         </TableHead>
         <TableBody sx={{background: "#FFFFFF", '&:last-child': { borderBottom: 0 } }}>
-          {rows?.map((row, key) => (
+          {rows?.map((row, index, key) => (
             
             <TableRow
               key={row.first}
-              sx={{ border: `${row.first == "Anindya" && "1.2px solid #00286B"} `  }}
+              sx={ index == 0 ? { border: "2px solid #00286B !important" } : "" }
             >
               <TCell component="th" scope="row" padding={padding}>
-                <Typography variant="saleTableBody"> {row.first} </Typography>
+                <Typography variant="saleTableBody"> {row.first +" "+ index} </Typography>
               </TCell>
               <TCell padding= {padding}> <Typography variant="saleTableBody"> {row.second} </Typography> </TCell>
               <TCell padding={padding}> <Typography variant="saleTableBody"> {row.third} </Typography> </TCell>

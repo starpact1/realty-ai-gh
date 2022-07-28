@@ -1,10 +1,9 @@
-import { Button, Container } from '@mui/material'
+import { Button, Container, Paper } from '@mui/material'
+import { Box } from '@mui/system'
 import React from 'react'
 import Appreciation from '../../Component/FilterScreenComponent/Appreciation'
 import Area from '../../Component/FilterScreenComponent/Area'
 import ConstructionStatus from '../../Component/FilterScreenComponent/ConstructionStatus'
-
-
 import Header from '../../Component/FilterScreenComponent/Header'
 import Price from '../../Component/FilterScreenComponent/Price'
 import Progress from '../../Component/FilterScreenComponent/Progress'
@@ -16,7 +15,7 @@ import UnitType from '../../Component/FilterScreenComponent/UnitType'
 
 function FilterScreen() {
     return (
-        <div style={{backgroundColor: "#FFFFFF"}}>
+        <div style={{ backgroundColor: "#FFFFFF" }}>
             <Header />
             <Sorting />
             <PropertyType />
@@ -28,12 +27,16 @@ function FilterScreen() {
             <RentalYield />
             <Risk />
             <Progress />
-            <Container sx={{px: "20px", mt: "22px"}}>
-            <Button variant="button2" sx={{width: "100%", py: "16px", fontSize: "20px", lineHeight: "26px", fontFamily: "DM Sans", fontStyle: "normal", fontWeight:700}}>
-                Apply
-            </Button>
-            </Container>
-            
+
+            <Box sx={{mt: "82px"}}></Box>
+
+            <Paper variant="square" sx={{ px: "20px", mt: "22px", pt: "12px", pb: "16px", position: "fixed", bottom: "0px", width: "100%" }}>
+                <Button variant="button2" sx={{ width: "100%", py: "16px", fontSize: "20px", lineHeight: "26px", fontFamily: "DM Sans", fontStyle: "normal", fontWeight: 700 }}>
+                    Apply
+                </Button>
+            </Paper>
+
+
         </div>
     )
 }

@@ -9,7 +9,7 @@ import Like from "../../Images/Icon/like.png"
 const Paper1 = styled(Paper)(({ theme }) => ({
     background: "#FBFBFB",
     boxShadow: "0px 2px 12px rgba(0, 0, 0, 0.25)",
-    padding: "12px 26px",
+    padding: "12px 16px",
 
 }))
 
@@ -67,8 +67,8 @@ function Sorting() {
                 <Box sx={{ textAlign: "left", mb: "10px" }}>
                     <Typography variant="subHeading1" fontWeight={500} lineHeight="21px"> Sorting </Typography>
                 </Box>
-                <Grid container>
-                    <Grid1 xs={3} >
+                <Grid container >
+                    <Grid1 item xs={3} >
                         <SortingOption className="active-sorting">
                             <img src={Graph1} style={{ width: "23px", height: "23px" }}/>
                             <SortingHeading className="active-sorting-heading"> Appreciation </SortingHeading>
@@ -78,7 +78,7 @@ function Sorting() {
                         </SortingOption>
                     </Grid1>
 
-                    <Grid1 xs={3}>
+                    <Grid1 item xs={3}>
                         <SortingOption >
                             <img src={ HomeRupees } />
                             <SortingHeading className="active-sorting-heading"> Rental Yield </SortingHeading>
@@ -88,7 +88,7 @@ function Sorting() {
                         </SortingOption>
                     </Grid1>
 
-                    <Grid1 xs={3}>
+                    <Grid1 item xs={3}>
                         <SortingOption >
                             <img src={HomeUser} />
                             <SortingHeading className="active-sorting-heading"> Livability Index </SortingHeading>
@@ -98,7 +98,7 @@ function Sorting() {
                         </SortingOption>
                     </Grid1>
 
-                    <Grid1 xs={3}>
+                    <Grid1 item xs={3}>
                         <SortingOption >
                             <img src={Like} />
                             <SortingHeading className="active-sorting-heading"> Rating </SortingHeading>

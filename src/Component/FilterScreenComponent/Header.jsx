@@ -1,9 +1,13 @@
 import React from 'react'
 import BackIcon from "../../Images/Icon/back-icon.png"
-import { Button, Container, Grid, Paper, Typography } from '@mui/material'
+import { Button, ButtonBase, Container, Grid, Paper, Typography } from '@mui/material'
+import { useNavigate } from 'react-router-dom'
 
 
 function Header() {
+
+    const navigate = useNavigate()
+
   return (
     <div>
         <Container variant="ct13" >
@@ -11,7 +15,9 @@ function Header() {
                     <Grid container sx = {{ display: "flex", justifyContent: "center", alignItems: "center", height: "70px" }}>
 
                         <Grid item xs={4} sx={{ textAlign: "left" }}>
+                        <ButtonBase onClick={() => navigate(-1)}>
                             <img src={BackIcon} />
+                            </ButtonBase>
                         </Grid>
 
                         <Grid item xs={4} sx={{ textAlign: "center" }}>

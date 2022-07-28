@@ -1,9 +1,10 @@
 import React from 'react'
-import { Box, Container, Grid, Paper, styled, Typography } from '@mui/material'
+import { Box, ButtonBase, Container, Grid, Paper, styled, Typography } from '@mui/material'
 import Slider from 'react-slick'
 import Card3 from './Card3'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"
+import { Link, useNavigate } from "react-router-dom"
 
 const Slide = styled(Box)(({ theme }) => ({
     paddingLeft: "-100px",
@@ -14,6 +15,8 @@ const Slide = styled(Box)(({ theme }) => ({
   }))
 
 function HighAppreciation() {
+  
+  const navigate = useNavigate()
 
     const settings = {
         dots: false,
@@ -64,7 +67,9 @@ function HighAppreciation() {
               <Typography variant="fs20fw700"> High Appreciation </Typography>
             </Grid>
             <Grid items xs={4} sx={{ textAlign: "right" }}>
+              <Link to="/properties-listing">
               <Typography variant="seeAll"> See all </Typography>
+              </Link>
             </Grid>
             <Grid items xs={12} sx={{ textAlign: "left", mt: "9.97px" }}>
               <Typography variant="subHeading3"> Projects that have the highest appreciation potential with low risk </Typography>
@@ -75,19 +80,29 @@ function HighAppreciation() {
         <Box sx={{ width: "99%", overflow: "hidden" }}>
           <Slider {...settings}>
             <Slide>
+            <ButtonBase onClick={() => navigate("/sample")}>
               <Card3 />
+              </ButtonBase>
             </Slide>
             <Slide>
+              <ButtonBase onClick={() => navigate("/sample")}>
               <Card3 />
+              </ButtonBase>
             </Slide>
             <Slide>
+              <ButtonBase onClick={() => navigate("/sample")}>
               <Card3 />
+              </ButtonBase>
             </Slide>
             <Slide>
+              <ButtonBase onClick={() => navigate("/sample")}>
               <Card3 />
+              </ButtonBase>
             </Slide>
             <Slide>
+              <ButtonBase onClick={() => navigate("/sample")}>
               <Card3 />
+              </ButtonBase>
             </Slide>
           </Slider>
 

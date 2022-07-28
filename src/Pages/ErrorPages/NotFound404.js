@@ -155,6 +155,23 @@ function NotFound404() {
                         </Link>
                     </Box>
 
+                    <Box sx={{ mt: 2 }}>
+                        <Link to="/gallery">
+                        /gallery
+                        </Link>
+                    </Box>
+
+                    <Box sx={{ mt: 2 }}>
+                        <Link to="/search">
+                        /search
+                        </Link>
+                    </Box>
+
+                    <Box sx={{ mt: 2 }}>
+                        <Link to="/sample">
+                        /sample
+                        </Link>
+                    </Box>
 
 
                 </Paper>

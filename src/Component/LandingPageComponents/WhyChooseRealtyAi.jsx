@@ -18,6 +18,7 @@ const PreviewHolder = styled(Paper)(({ theme }) => ({
     filter: "drop-shadow(0px 8px 16px rgba(24, 50, 115, 0.2))",
     borderRadius: "6px",
     height: "200px",
+    position: "relative",
     backgroundImage: `url(${VideoBackground})`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "110% 125%",

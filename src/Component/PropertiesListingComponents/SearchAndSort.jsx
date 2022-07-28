@@ -9,6 +9,7 @@ import WalletIcon from "../../Images/Icon/wallet.png"
 import SortIcon from "../../Images/Icon/SortIcon.png"
 import "./SearchAndSort.css"
 import SelectInput2 from './SelectInput2'
+import { useNavigate } from 'react-router-dom'
 
 const MapButton = styled(ButtonBase)(({ theme }) => ({
 
@@ -30,6 +31,9 @@ const ItemContainerBox = styled(Box)(({ theme }) => ({
 
 
 function SearchAndSort({ wishlist = false }) {
+
+  const navigate = useNavigate()
+
 
   const BHKDataOptions = [
     {
@@ -85,7 +89,7 @@ function SearchAndSort({ wishlist = false }) {
             }
 
             <Grid item xs={2}>
-              <MapButton>
+              <MapButton onClick={() => navigate("/heat-map")}>
                 <img src={MapIcon} />
               </MapButton>
             </Grid>
@@ -96,7 +100,7 @@ function SearchAndSort({ wishlist = false }) {
             <Grid item xs={12} className="overflowHidden" sx={{ overflow: "auto", scrollbarWidth: "none", display: "flex", flexDirection: "row", pt: "14px", color: "#1A1E25", textAlign: "left" }} >
               {/* Content 1 */}
 
-              <MapButton sx={{ flexDirection: "column", height: "48px", pt: "9px", pb: "4px", px: "9px" }}>
+              <MapButton onClick={() => navigate("/filter-screen")} sx={{ flexDirection: "column", height: "48px", pt: "9px", pb: "4px", px: "9px" }}>
                 <img src={FilterIcon1} />
 
                 <Typography variant="fs10fw500" lineHeight="183.2%" color="inherit"> Filters </Typography>

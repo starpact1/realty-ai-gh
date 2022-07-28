@@ -1,24 +1,29 @@
 import React from 'react'
-import { Box, Container, Grid, Paper, styled, Typography } from '@mui/material'
+import { Box, ButtonBase, Container, Grid, Paper, styled, Typography } from '@mui/material'
 import Slider from 'react-slick'
 import Card1 from './Card1'
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"
+import { Link, useNavigate } from 'react-router-dom'
 
 
 const Slide = styled(Box)(({ theme }) => ({
-      paddingLeft: "-100px",
-      paddingRight: "100px",
-      paddingBottom: "10px",
-      width: "80%",
-      marginLeft: "-30px"
+  paddingLeft: "-100px",
+  paddingRight: "100px",
+  paddingBottom: "10px",
+  width: "80%",
+  marginLeft: "-30px"
 }))
 
 function HotSellingProjects() {
+
+  const navigate = useNavigate()
+
+
   const settings = {
     dots: false,
     infinite: false,
-    
+
     // autoplay: true,
     centerMode: true,
     centerPadding: "12%",
@@ -61,36 +66,48 @@ function HotSellingProjects() {
         <Container variant="ct20">
           <Grid container>
             <Grid items xs={8} sx={{ textAlign: "left" }}>
-              <Typography variant="fs20fw700"> High Sales Properties </Typography>
+              <Typography variant="fs20fw700"> Hot Selling Properties </Typography>
             </Grid>
             <Grid items xs={4} sx={{ textAlign: "right" }}>
-              <Typography variant="seeAll"> See all </Typography>
+              <ButtonBase onClick={() => navigate("/properties-listing")}>
+                <Typography variant="seeAll"> See all </Typography>
+              </ButtonBase>
             </Grid>
             <Grid items xs={12} sx={{ textAlign: "left", mt: "9.97px" }}>
               <Typography variant="subHeading3"> Projects that have the highest sales potential with low risk </Typography>
             </Grid>
           </Grid>
         </Container>
-        
-        <Box sx={{width: "99%", overflow: "hidden"}}>
+
+        <Box sx={{ width: "99%", overflow: "hidden" }}>
           <Slider {...settings}>
             <Slide>
-              <Card1 />
+              <ButtonBase onClick={() => navigate("/sample")}>
+                <Card1 />
+              </ButtonBase>
             </Slide>
             <Slide>
-              <Card1 />
+              <ButtonBase onClick={() => navigate("/sample")}>
+                <Card1 />
+              </ButtonBase>
             </Slide>
             <Slide>
-              <Card1 />
+              <ButtonBase onClick={() => navigate("/sample")}>
+                <Card1 />
+              </ButtonBase>
             </Slide>
             <Slide>
-              <Card1 />
+              <ButtonBase onClick={() => navigate("/sample")}>
+                <Card1 />
+              </ButtonBase>
             </Slide>
             <Slide>
-              <Card1 />
+              <ButtonBase onClick={() => navigate("/sample")}>
+                <Card1 />
+              </ButtonBase>
             </Slide>
           </Slider>
-          
+
         </Box>
       </Paper>
     </div>

@@ -8,14 +8,17 @@ import ProfileImage from "../Images/Image1/Profile.png"
 import PhoneImage from "../Images/Image1/phone2.png"
 import FooterModal from './FooterModal'
 import { useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
+
+
 const Footer = styled(Paper)(({ theme }) => ({
 
     position: "fixed",
     paddingTop: "18px",
     paddingBottom: "18px",
     bottom: "0px",
-    width: "100%"
-
+    width: "100%",
+    boxShadow: "0px 2px 12px rgba(0, 0, 0, 0.25)",
 
 }))
 const FooterFont = styled(Typography)(({ theme }) => ({
@@ -55,6 +58,8 @@ const ContactImageHolder = styled(Box)(({ theme }) => ({
 
 function StaticFooter() {
 
+    const navigate = useNavigate()
+
     const [isOpen, setIsOpen] = useState(false)
 
     const handelIsOpen = () => {
@@ -68,44 +73,52 @@ function StaticFooter() {
         <div>
             <Footer>
                 <Grid container>
-                    <Grid item xs={2}>
-                        <img src={Home} style={{height: "19px"}}/>
-                        <FooterFont>
-                            Home
-                        </FooterFont>
+                    <Grid item xs={2} sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+                        <ButtonBase sx={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }} onClick={() => navigate("/landing-page")}>
+                            <img src={Home} style={{ height: "19px" }} />
+                            <FooterFont>
+                                Home
+                            </FooterFont>
+                        </ButtonBase>
                     </Grid>
-                    <Grid item xs={2}>
-                        <img src={Compare} style={{height: "19px"}}/>
-                       <FooterFont> Compare </FooterFont>
+                    <Grid item xs={2} sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+                        <ButtonBase sx={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }} onClick={() => navigate("/compare-page")}>
+                            <img src={Compare} style={{ height: "19px" }} />
+                            <FooterFont> Compare </FooterFont>
+                        </ButtonBase>
                     </Grid>
-                    <Grid item xs={4} sx={{position: "relative"}}>
+                    <Grid item xs={4} sx={{ position: "relative" }}>
                         <ButtonBase onClick={() => modalRef.current.handleOpen1()} >
-                        <ContactImageHolder>
-                            <Box sx={{position: "absolute", width: "25px", height: "25px", backgroundImage: `url(${PhoneImage})`, top: "50%", left: "50%", transform: "translateY(-50%) translateX(-50%)"}}>
+                            <ContactImageHolder>
+                                <Box sx={{ position: "absolute", width: "25px", height: "25px", backgroundImage: `url(${PhoneImage})`, top: "50%", left: "50%", transform: "translateY(-50%) translateX(-50%)" }}>
 
-                            </Box>
-                        </ContactImageHolder>
-                        
-                        {/* <img src={ContactUs}/> */}
-                      <FooterFont sx={{pt: "24px"}}> Contact Us </FooterFont>
-                      </ButtonBase>
+                                </Box>
+                            </ContactImageHolder>
+
+                            {/* <img src={ContactUs}/> */}
+                            <FooterFont sx={{ pt: "24px" }}> Contact Us </FooterFont>
+                        </ButtonBase>
                     </Grid>
-                    <Grid item xs={2}>
-                        <img src={whislist} style={{height: "19px"}}/>
-                      <FooterFont> Wishlist </FooterFont>
+                    <Grid item xs={2} sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+                        <ButtonBase sx={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }} onClick={() => navigate("/wishlist")}>
+                            <img src={whislist} style={{ height: "19px" }} />
+                            <FooterFont> Wishlist </FooterFont>
+                        </ButtonBase>
                     </Grid>
-                    <Grid item xs={2}>
-                        <img src={ProfileImage} style={{height: "19px"}}/>
-                       <FooterFont color="#4766F9"> Profile </FooterFont>
+                    <Grid item xs={2} sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+                        <ButtonBase sx={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }} onClick={() => navigate("/profile")}>
+                            <img src={ProfileImage} style={{ height: "19px" }} />
+                            <FooterFont color="#4766F9"> Profile </FooterFont>
+                        </ButtonBase>
                     </Grid>
                 </Grid>
-                <Grid container>
+                {/* <Grid container>
                     <Grid item xs={12} sx={{ justifyContent: "center" }}>
                         <Box sx={{ height: "5px", backgroundColor: "#E9ECEF", width: "145px", mt: "10px", mx: "auto" }}></Box>
                     </Grid>
-                </Grid>
+                </Grid> */}
             </Footer>
-            <FooterModal ref={modalRef}/>
+            <FooterModal ref={modalRef} />
         </div>
     )
 }

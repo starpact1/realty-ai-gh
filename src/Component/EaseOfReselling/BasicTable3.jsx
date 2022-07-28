@@ -35,7 +35,7 @@ const TCell = styled(TableCell)(({ theme, padding }) => ({
 
 
 
-function BasicTable3({ headings, rows, padding }) {
+function BasicTable3({ highlight, headings, rows, padding }) {
 
     const [textBadge, setTextBadge] = useState("greenBadge")
 
@@ -74,11 +74,11 @@ function BasicTable3({ headings, rows, padding }) {
                         </TableRow>
                     </TableHead>
                     <TableBody sx={{ background: "#FFFFFF", '&:last-child': { borderBottom: 0 } }}>
-                        {rows?.map((row, key) => (
+                        {rows?.map((row, index,  key) => (
 
                             <TableRow
                                 key={row.first}
-                                sx={{ border: `${row.first == "Anindya" && "1.2px solid #00286B"} ` }}
+                                sx={ highlight && index == 0 && { border: "2px solid #00286B" }}
                             >
                                 <TCell component="th" scope="row" padding={padding} sx={{ whiteSpace: "pre-line" }}>
                                     {row.firstLink == "#" ?

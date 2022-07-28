@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { Box, Button, Container, InputBase, Paper, styled, Typography } from '@mui/material'
 import BannerBackground from "../../Images/Image1/ProfileBackground.png"
 import VectorBackground from "../../Images/Image1/ProfileVector.png"
@@ -37,7 +37,7 @@ const ProfileImageHolder = styled(Box)(({ theme }) => ({
 }))
 
 const InputLabel = styled(Typography)(({ theme }) => ({
-    
+
     fontFamily: "DM Sans",
     fontStyle: "normal",
     fontWeight: 500,
@@ -54,56 +54,63 @@ const InputLabel = styled(Typography)(({ theme }) => ({
 
 
 function Profile() {
+
+    const InputRef = useRef()
+
     return (
         <div>
-            <BannerHolder>
-                <VectorHolder />
-                <ProfileImageHolder>
-                </ProfileImageHolder>
-            </BannerHolder>
-            <Container sx = {{ pt: "44px" }}>
-                <Button variant="button3" sx={ {border: "1px solid #00286B", borderRadius: "5px", fontSize: "13px", fontWeight: 500, lineHeight: "17px"}}>
-                    Change Picture
-                </Button>
-            </Container>
-
-            <Container variant="ct29" sx={{pt: "30px", textAlign: "left"}} >
-                <Box>
-                    <InputLabel>
-                        Username
-                    </InputLabel>
-                    <InputBase className="inputBase"/>
-                </Box>
-
-                <Box sx={{mt: "25px"}}>
-                    <InputLabel>
-                        Eamil Address
-                    </InputLabel>
-                    <InputBase className="inputBase"/>
-                </Box>
-
-                <Box sx={{mt: "25px"}}>
-                    {/* TODO: use input mask */}
-                    <InputLabel>
-                        Phone Number
-                    </InputLabel>
-                    <InputBase className="inputBase"/>
-                </Box>
-
-                <Box sx={{mt: "25px"}}>
-                    <InputLabel>
-                       Password
-                    </InputLabel>
-                    <InputBase className="inputBase"/>
-                </Box>
-
-                <Box sx = {{ marginTop: "85px", marginBottom: "85px" }}>
-                    <Button variant="button1">
-                        Update
+            <Paper sx={{mt: "-24px", boxShadow: "none"}}>
+                <BannerHolder>
+                    <VectorHolder />
+                    <ProfileImageHolder>
+                    </ProfileImageHolder>
+                </BannerHolder>
+                <Container sx={{ pt: "44px" }}>
+                    <Button variant="button3" onClick={ () => InputRef.current.click() } sx={{ border: "1px solid #00286B", borderRadius: "5px", fontSize: "13px", fontWeight: 500, lineHeight: "17px" }}>
+                        Change Picture
                     </Button>
-                </Box>
-            </Container>
-            <StaticFooter/>
+                    <input type="file" ref={InputRef} style={{display: "none"}} />
+                </Container>
+
+                <Container variant="ct29" sx={{ pt: "30px", textAlign: "left" }} >
+                    <Box>
+                        <InputLabel>
+                            Username
+                        </InputLabel>
+                        <InputBase className="inputBase" />
+                    </Box>
+
+                    <Box sx={{ mt: "25px" }}>
+                        <InputLabel>
+                            Email Address
+                        </InputLabel>
+                        <InputBase className="inputBase" />
+                    </Box>
+
+                    <Box sx={{ mt: "25px" }}>
+                        {/* TODO: use input mask */}
+                        <InputLabel>
+                            Phone Number
+                        </InputLabel>
+                        <InputBase className="inputBase" value="+91 9768427098" disabled/>
+                    </Box>
+
+                    <Box sx={{ mt: "25px" }}>
+                        <InputLabel>
+                            Password
+                        </InputLabel>
+                        <InputBase className="inputBase" />
+                    </Box>
+
+                    <Box sx={{ marginTop: "85px", marginBottom: "85px" }}>
+                        <Button variant="button1" sx={{width: "100%"}}>
+                            Update
+                        </Button>
+                    </Box>
+                </Container>
+                <StaticFooter />
+            </Paper>
+
         </div>
     )
 }

@@ -55,7 +55,7 @@ function SalesGraph() {
                         </Paper>
                         <Box sx={{ ml: "10px" }}>
                             <Typography variant="fs14fw500" color="#323232">
-                                units sold out of total.
+                                units sold out of total
                             </Typography>
                         </Box>
 

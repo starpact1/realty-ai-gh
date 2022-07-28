@@ -75,7 +75,7 @@ const rows = [
 
 function BuilderHistory() {
 
-    const [viewMore, setViewMore] = useState(false)
+    const [viewMore, setViewMore] = useState(true)
 
     const handelViewMore = () => {
         setViewMore((prev) => !prev)
@@ -90,14 +90,14 @@ function BuilderHistory() {
                     <BuilderTable rows={rows} headings={headings} />
                 </Box>
 
-                <Container variant="ct25" sx={{ textAlign: "left", mt: "20px" }}>
+                {/* <Container variant="ct25" sx={{ textAlign: "left", mt: "20px" }}>
                     <Link href="#" onClick={handelViewMore}>
                         <Typography variant="seeAll" fontSize="12px">
                             { viewMore ? <span> View Less </span> : <span> View More </span> }
                             
                         </Typography>
                     </Link>
-                </Container>
+                </Container> */}
 
                 <Collapse in={viewMore}>
                     <Container variant="ct25" sx={{ textAlign: "left", mt: "15px" }}>

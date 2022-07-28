@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { useEffect, useState } from 'react';
 import DesktopView from './Errors/DesktopView';
-import { Button, CssBaseline, ThemeProvider } from '@mui/material';
+import { Autocomplete, Button, CssBaseline, ThemeProvider } from '@mui/material';
 import theme from "./Theme/MainTheme"
 import Login from './Pages/Login/Login';
 import OTPVerification from './Pages/OTPVerification/OTPVerification';
@@ -41,7 +41,12 @@ import AmenitiesPage from './Pages/AmenitiesPage/AmenitiesPage';
 import PriceValue from './Pages/PriceValue/PriceValue';
 import ComparePage from './Pages/ComparePage/ComparePage';
 import HeatMap from './Pages/HeatMap/HeatMap';
-
+import LightBox from './Test/LightBox';
+import Gallery from './Pages/Gallery/Gallery';
+import AutocompleteTags from './Test/AutocompleteTags';
+import SearchPage from "./Pages/SearchPage/SearchPage"
+import Sample from './Pages/Sample/Sample';
+import ScrollTop from './Component/ScrollTop';
 
 
 function App() {
@@ -65,6 +70,7 @@ function App() {
           </> :
           <>
             <Router>
+              <ScrollTop/>
               <Routes>
                 {/* Week 1 */}
                 <Route path="/" element = { <Login /> } />
@@ -96,12 +102,17 @@ function App() {
                 <Route path="/price-value" element = { <PriceValue /> }/>
                 <Route path="/compare-page" element = { <ComparePage /> }/>
                 <Route path="/heat-map" element = { <HeatMap /> }/>
+                <Route path="/gallery" element = { <Gallery /> }/>
+                <Route path="/search" element = { <SearchPage /> }/>
+                <Route path="/sample" element = { <Sample /> }/>
 
                 {/* Test Components */}
 
                 <Route path="slider-range" element = { <SliderRange /> } />
                 <Route path="value-slider" element = { <ValueSlider /> } />
                 <Route path="toggle-button" element = { <ToggleButtons /> } />
+                <Route path="light-box" element = { <LightBox /> } />
+                <Route path="autocomplete-tags" element = { <AutocompleteTags /> } />
                 
 
               </Routes>

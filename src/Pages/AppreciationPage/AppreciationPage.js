@@ -99,7 +99,7 @@ function AppreciationPage() {
                 </Box> */}
 
                 <Box sx={{ width: "100%", mt: "20px" }}>
-                    <BasicTable2 headings={headings} rows={rows} padding="6px" />
+                    <BasicTable2 highlight={true} headings={headings} rows={rows} padding="6px" />
                 </Box>
 
                 <Box sx={{ width: "100%", mt: "25px" }}>

@@ -6,6 +6,7 @@ import SearchIconPng from "../../Images/Icon/Search.png"
 import Carret from "../../Images/Icon/carret.png"
 import ValueSlider from '../../Component/ValueSlider';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
+import { useNavigate } from 'react-router-dom';
 
 const marks = [
   {
@@ -17,11 +18,14 @@ const marks = [
 ];
 
 function Search1() {
+
   const cities = ["Mumbai", "Delhi", "Kolkata"]
+  const navigate = useNavigate()
+
   return (
     <div>
 
-      <Paper sx={{ borderRadius: "17px", background: "#FFFFFF", boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.1)", mt: "20px" }}>
+      <Paper onClick={() => navigate("/search")} sx={{ borderRadius: "17px", background: "#FFFFFF", boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.1)", mt: "20px" }}>
         <Grid container>
           <Grid item xs={12}>
             <Container variant="ct13" sx={{ pt: "28px", }}>

@@ -4,6 +4,7 @@ import PlusIcon from "../../Images/Icon/PlusIcon.png"
 import ProjectCell from '../AmenitiesPage/ProjectCell';
 import Indicators from './Indicators';
 import BestProjects from '../PropertiesListingComponents/BestProjects';
+import { useNavigate } from 'react-router-dom'
 
 
 const AddMoreButton = styled(ButtonBase)(({ theme }) => ({
@@ -168,13 +169,19 @@ const LivabilityFactors = {
 }
 
 
-function CompareBody() {
+function CompareBody( {allowSelect = true} ) {
+
+    const navigate = useNavigate()
+
 
     return (
         <div>
             <Paper sx={{ background: "#FFFFFF", position: "relative", boxShadow: "none", }}>
                 <Container variant="ct25" sx={{ pt: "16px", textAlign: "left" }}>
-                    <Typography component="h2" variant="salesPageHeading"> Number of projects selected: (3/5) </Typography>
+                    <Typography component="h2" variant="salesPageHeading"> 
+                        {allowSelect ? "Number of projects selected: (3/5)" : "Compare with Similar Properties"}
+                         
+                    </Typography>
                     <Typography component="h2" variant="fs14fw500" color="#DB3B3B" mt="2px"> Sorry, we are unable to add any more projects. </Typography>
                 </Container>
 
@@ -184,7 +191,7 @@ function CompareBody() {
                     <Box sx={{ display: "flex", mt: "15px", ml: "26px" }}>
 
                         <Box sx={{ display: "flex", alignItems: 'center', width: "116px", borderRight: "1px solid #E3E3E7", pr: "8px", }}>
-                            <AddMoreButton>
+                            <AddMoreButton onClick={() => navigate("/compare-page")}>
                                 <img src={PlusIcon} style={{ marginLeft: "4.94px", marginRight: "7.94px" }} />
                                 <Box sx={{ textAlign: "left" }}>
                                     <Typography variant="fs10fw500" color="#00286B" lineHeight="1"> Add/Remove more Properties to Compare </Typography>
@@ -219,6 +226,7 @@ function CompareBody() {
 
                 </Box>
 
+                {allowSelect && 
                 <Paper variant="BGF9FBFF" sx={{ mt: "0px", py: "0px" }}>
                     <Container variant="ct25" sx={{ py: "16px", textAlign: "left" }}>
                         <Typography variant="salesPageHeading"> Compare with other similar properties  </Typography>
@@ -231,6 +239,7 @@ function CompareBody() {
                     <BestProjects compare={true} mt="20px" />
 
                 </Paper>
+                }
 
             </Paper>
         </div>

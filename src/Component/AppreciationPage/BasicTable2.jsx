@@ -34,7 +34,7 @@ const TCell = styled(TableCell)(({ theme, padding }) => ({
     whiteSpace: "nowrap"
 }))
 
-function BasicTable2({ headings, rows, padding }) {
+function BasicTable2({highlight, headings, rows, padding }) {
     return (
         <div>
             <TableContainer component={Paper}>
@@ -50,11 +50,11 @@ function BasicTable2({ headings, rows, padding }) {
                         </TableRow>
                     </TableHead>
                     <TableBody sx={{ background: "#FFFFFF", '&:last-child': { borderBottom: 0 } }}>
-                        {rows?.map((row, key) => (
+                        {rows?.map((row, index, key) => (
 
                             <TableRow
                                 key={row.first}
-                                sx={{ border: `${row.first == "Anindya" && "1.2px solid #00286B"} ` }}
+                                sx={ highlight && index == 0 && { border: "2px solid #00286B" }}
                             >
                                 <TCell component="th" scope="row" padding={padding}>
                                     {row.firstLink == "#" ?

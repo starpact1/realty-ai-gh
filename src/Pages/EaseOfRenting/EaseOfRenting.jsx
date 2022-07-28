@@ -85,7 +85,7 @@ function EaseOfRenting() {
                         <ul className="addSpace">
                             <li>
                                 <Typography variant="fs14fw500" lineHeight="18px" letterSpacing="0.01em" color="#323232" >
-                                    There are many rental units available within a society (see Ratio 1)
+                                    There are many rental units available within the society (see Ratio 1)
                                 </Typography>
                             </li>
 
@@ -101,7 +101,7 @@ function EaseOfRenting() {
 
 
                 <Box sx={{ width: "100%", mt: "20px" }}>
-                    <BasicTable3 headings={headings} rows={rows} padding="6px" />
+                    <BasicTable3 highlight={true} headings={headings} rows={rows} padding="6px" />
                 </Box>
 
             </Paper>

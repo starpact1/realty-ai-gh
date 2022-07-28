@@ -12,6 +12,10 @@ import Location from "../../Images/Icon/Location.png"
 import Layout from "../../Images/Icon/Layout.png"
 import "./SearchAndSort.css"
 import ProjectRisk from './ProjectRisk'
+import ReraImg from "../../Images/Icon/Rera-white.png"
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+
 
 const Box2 = styled(Box)(({ theme }) => ({
     marginRight: "8px"
@@ -75,18 +79,36 @@ const Ptext3 = {
 
 function BestProjects({ mt = 0, wishlist = false, compare = false }) {
 
+    const navigate = useNavigate()
+
     const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
+    const [blueLayover, setBlueLayover] = useState(true)
+
+    const handelCheckChange = () => {
+        setBlueLayover(prev => !prev)
+        console.log(blueLayover)
+    }
+
+    const handleNavigate = () => {
+        navigate("/sample")
+    }
 
     return (
         <div>
             <Paper variant="E9F2FF" sx={{ mt: `${mt}`, pb: "23px" }}>
                 <Paper variant="square" sx={{ border: "0.5px solid #47AFFF", borderRadius: "10px", py: "0px" }}>
-                    <Grid container>
+                    <Grid container onClick={ compare === false && handleNavigate } >
                         <Grid item xs={4}>
-                            <Box sx={{ width: "100%", height: "100%", backgroundImage: `url(${BestPropertyImage})`, backgroundSize: "100% 100%", backgroundRepeat: "no-repeat" }}>
+                            <Box sx={{ width: "100%", position: "relative", height: "100%", backgroundImage: `url(${BestPropertyImage})`, backgroundSize: "100% 100%", backgroundRepeat: "no-repeat" }}>
+                                {/* Rear Mark */}
+                                <Box sx={{position: "absolute", display: "flex", justifyContent: "center", alignItems: "center", top: "0px", right: "0px", backgroundColor: "#004D8E", width: "58px", height: "26px", borderRadius: "5px 0px 0px 5px"}}>
+                                    <img src={ReraImg} style={{width: "12px", height: "12px"}} />
+                                    <Typography variant="fs12fw700" ml="3px"> RERA </Typography>
+                                </Box>
+                                {/* Rera Mark */}
                                 {compare &&
-                                    <Box sx={{  width : "100%", height : "100%", display : "flex", alignItems: "center", justifyContent: "center", background : "rgba(127, 134, 164, 0.6)", borderRadius : "10px 0px 0px 0px" }}>
-                                        <Checkbox {...label} defaultChecked sx={{ '& .MuiSvgIcon-root': { fontSize: 62, color: "#00286B",  }  }}  />
+                                    <Box sx={{  width : "100%", height : "100%", display : "flex", alignItems: "center", justifyContent: "center", background : `${ blueLayover ? "rgba(127, 134, 164, 0.6)" : "" }`, borderRadius : "10px 0px 0px 0px" }}>
+                                        <Checkbox onChange={ handelCheckChange} {...label} defaultChecked sx={{ '& .MuiSvgIcon-root': { fontSize: 62, color: "#00286B",  }  }}  />
                                     </Box>
                                 }
                             </Box>
@@ -101,11 +123,11 @@ function BestProjects({ mt = 0, wishlist = false, compare = false }) {
                                     </Grid>
                                     <Grid item xs={8} sx={{ textAlign: "left", pl: "8px" }}>
                                         <Typography component="h2" variant="fs12fw700" color="#323643" >
-                                            Strong Buy
+                                            Strong Buy for
                                         </Typography>
 
                                         <Typography component="h2" variant="fs12fw700" color="#323643" >
-                                            for <span style={{ textDecoration: "underline" }}> long term investment </span>
+                                             <span style={{ textDecoration: "underline" }}> long term investment </span>
                                         </Typography>
                                     </Grid>
                                     <Grid item xs={2}>
@@ -123,7 +145,7 @@ function BestProjects({ mt = 0, wishlist = false, compare = false }) {
                                     <Grid item xs={12} sx={{ textAlign: "left" }}>
                                         <Typography variant="fs11fw500" component="h2"> 1 BHK, 2BHK in Wadhwani Pristine </Typography>
                                         <Typography variant="fs10fw500lh130" component="h2"> Lower Parel, Mumbai </Typography>
-                                        <ul style={{ margin: 0, padding: "0px", paddingTop: "4px", paddingLeft: "18px", }}>
+                                        <ul style={{ margin: 0, padding: "0px", paddingTop: "4px", paddingLeft: "2px", listStyleType: "none" }}>
                                             <li>
                                                 <Typography variant="fs10fw500lh130">
                                                     Possession: Jul’ 25
@@ -164,6 +186,26 @@ function BestProjects({ mt = 0, wishlist = false, compare = false }) {
                                 <FinancialIndicator image1={HomeRupees} textContent={text3} />
                             </Box2>
 
+                            <Box2>
+                                <FinancialIndicator image1={HomeUnits} textContent={text1} />
+                            </Box2>
+                            <Box2>
+                                <FinancialIndicator image1={Graph1} textContent={text2} />
+                            </Box2>
+                            <Box2>
+                                <FinancialIndicator image1={HomeRupees} textContent={text3} />
+                            </Box2>
+
+                            <Box2>
+                                <FinancialIndicator image1={HomeUnits} textContent={text1} />
+                            </Box2>
+                            <Box2>
+                                <FinancialIndicator image1={Graph1} textContent={text2} />
+                            </Box2>
+                            <Box2>
+                                <FinancialIndicator image1={HomeRupees} textContent={text3} />
+                            </Box2>
+
 
                         </Box>
 
@@ -177,6 +219,16 @@ function BestProjects({ mt = 0, wishlist = false, compare = false }) {
                             Project risks & Livability factors:
                         </Typography>
                         <Box className="overflowHidden" sx={{ mt: "10px", py: "4px", display: "flex", overflow: "auto" }}>
+
+                            <Box2>
+                                <ProjectRisk image1={Builder} textContent={Ptext1} />
+                            </Box2>
+                            <Box2>
+                                <ProjectRisk image1={Location} textContent={Ptext2} />
+                            </Box2>
+                            <Box2>
+                                <ProjectRisk image1={Layout} textContent={Ptext3} />
+                            </Box2>
 
                             <Box2>
                                 <ProjectRisk image1={Builder} textContent={Ptext1} />

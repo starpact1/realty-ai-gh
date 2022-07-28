@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import { Box, Button, Container, Paper, Typography } from '@mui/material'
 import MapBoxImage1 from "../../Images/Image1/MapBox1.png"
 import MapBackground from "../../Images/Image1/MapBackground.png"
+import { useNavigate } from 'react-router-dom'
 
 const MapBox = styled(Paper)(({ theme }) => ({
     height: "185px",
@@ -36,6 +37,9 @@ const MapBox2 = styled(Box)(({ theme }) => ({
 }));
 
 function FindLocality() {
+
+    const navigate = useNavigate()
+
     return (
         <div>
             <Container variant="ct14" sx={{ mt: "25px" }}>
@@ -49,7 +53,7 @@ function FindLocality() {
                         Find the best locality
                     </Typography>
                     </Box>
-                    <Button variant="button3" sx = {{ mt: "124.50px" }}>
+                    <Button variant="button3" onClick={() => navigate("/heat-map")} sx = {{ mt: "124.50px" }}>
                         See Heatmap
                     </Button>
                 </MapBox2>

@@ -1,4 +1,4 @@
-import { Button, Divider, Grid, TextField, Typography } from '@mui/material'
+import { Button, Divider, Grid, Paper, TextField, Typography } from '@mui/material'
 import { Box, Container } from '@mui/system'
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
@@ -63,7 +63,7 @@ function Login() {
                             }}
                         /> */}
                         <Box sx={{ display: "flex", width: "100%", justifyContent: "center", alignItems: "center" }}>
-                            <Box sx={{ width: "127px", display: "flex", }}>
+                            <Box sx={{ width: "148px", display: "flex", }}>
                                 <div style={{ fontSize: "16px", fontWeight: "bold", }}>+91</div>
                                 <div>
                                     <input type="number" className="phoneInput" value={phone} onChange={(e) => setPhone(e.target.value)} onFocus={handelOnFocus} onBlur={handelOnBlur} />
@@ -76,14 +76,22 @@ function Login() {
                     </Grid>
 
                     <Grid item xs={12}>
-                        <Link to="/otp-verification" style={{ textDecoration: "none" }}>
-                            <Button variant="button1" sx={{ mt: "68px" }}>
-                                Get OTP
-                            </Button>
-                        </Link>
+                        <Box sx={{ mt: "82px"}}>
+
+                        </Box>
                     </Grid>
                 </Grid>
+
+
+
             </Container>
+            <Paper variant="square" sx={{ position: "fixed", width: "100%", bottom: "2px" }}>
+                <Link to="/otp-verification" style={{ textDecoration: "none" }}>
+                    <Button variant="button1" sx={{ my: "12px" }}>
+                        Get OTP
+                    </Button>
+                </Link>
+            </Paper>
         </div>
     )
 }

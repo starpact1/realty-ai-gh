@@ -323,6 +323,22 @@ const theme = createTheme({
 
     },
 
+    fs19fw700: {
+      fontFamily: "DM Sans",
+      fontStyle: "normal",
+      fontWeight: 700,
+      fontSize: 19,
+      lineHeight: "100%",
+      /* or 19px */
+
+      letterSpacing: "0.02em",
+
+      /* Foundation /Blue/Dark */
+
+      color: "#1A1E25",
+
+    },
+
 
     fs10fw500lh130: {
       fontFamily: "DM Sans",
@@ -581,6 +597,34 @@ const theme = createTheme({
             textAlign: "center",
 
             color: "#232326",
+
+          }
+        },
+
+        {
+          props: { variant: "button6" },
+          style: {
+
+            background: "#1D58AF",
+            width: "100%",
+            height: "57px",
+            boxShadow: "0px 8px 16px rgba(27, 57, 255, 0.2)",
+            borderRadius: "10px",
+
+            fontFamily: "DM Sans",
+            fontStyle: "normal",
+            fontWeight: 700,
+            fontSize: "20px",
+            lineHeight: "26px",
+            /* identical to box height */
+
+            textAlign: "center",
+
+            color: "#FFFFFF",
+            textTransform: "capitalize",
+            "&:focus": {
+              background: "#1D58AF"
+            }
 
           }
         },
