@@ -1,0 +1,17 @@
+.phoneInput{
+    border: none;
+   
+    width: 100%;
+    outline: none;
+    text-align: left;
+    font-size: 16px;
+    background-color: inherit;
+    line-height: 20.83px;
+    font-weight: bold;
+    color: #B9B9B9;
+    margin-top: -0.6px;
+    
+}
+.phoneInput:focus, .phoneInput:active{
+    border: none;
+}

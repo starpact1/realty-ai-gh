@@ -1,0 +1,24 @@
+.roundedInput1 {
+    background: #FFFFFF;
+    border: 1px solid #D6D6D6;
+    border-radius: 12px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 19px;
+    padding-right: 19px;
+
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 183.2%;
+    /* identical to box height, or 26px */
+
+
+    color: #1A1E25;
+}
+
+.overflowHidden::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+

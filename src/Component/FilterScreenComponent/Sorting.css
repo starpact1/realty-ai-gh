@@ -1,0 +1,11 @@
+.active-sorting
+{
+    background: #EFF8FF;
+border: 1px solid #1D58AF;
+box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
+border-radius: 5px;
+}
+
+.active-sorting > .active-sorting-heading{
+    color: #1D58AF;
+}
